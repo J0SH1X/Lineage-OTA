@@ -8,21 +8,6 @@ size=`wc -c ../out/target/product/judyln/lineage-17.1-${d}-UNOFFICIAL-judyln.zip
 oldsize=`cat judyln.json | grep size | cut -d ':' -f 2`
 oldurl=`cat judyln.json | grep url | cut -d ' ' -f 8`
 
-#Debugging im not good with shell scripts
-echo DATE
-echo ${d}
-echo ${oldd}
-echo MD5
-echo ${md5}
-echo ${oldmd5}
-echo UTC
-echo ${utc}
-echo ${oldutc}
-echo SIZE
-echo ${size}
-echo ${oldsize}
-
-
 #This is where the magic happens
 
 
