@@ -1,3 +1,4 @@
+#!/bin/bash
 d=`date +%Y%m%d`
 oldd=`cat judyln.json | grep filename | cut -d '-' -f 3`
 md5=`md5sum ../out/target/product/judyln/lineage-17.1-${d}-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1`
@@ -16,5 +17,5 @@ sed -i "s!${oldutc}! \"${utc}\",!g" judyln.json
 sed -i "s!${oldsize}! \"${size}\",!g" judyln.json
 sed -i "s!${oldd}!${d}!" judyln.json
 echo Enter the new Download URL
-read url
+read -r url
 sed -i "s!${oldurl}! \"${url}\",!g" judyln.json
