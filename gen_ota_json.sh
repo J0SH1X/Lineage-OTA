@@ -1,4 +1,5 @@
 #!/bin/bash
+
 d=$(date +%Y%m%d)
 oldd=$(cat judyln.json | grep filename | cut -d '-' -f 3)
 md5=$(md5sum ../out/target/product/judyln/lineage-17.1-"${d}"-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1)
