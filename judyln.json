@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": "1586679561",
-      "filename": "lineage-17.1-20200412-UNOFFICIAL-judyln.zip",
-      "id": "fd1410e246bbaf22846be8767567b714",
+      "datetime": "1586770874",
+      "filename": "lineage-17.1-20200413-UNOFFICIAL-judyln.zip",
+      "id": "67a1c11077e45b2e631cd1294438feb6",
       "romtype": "UNOFFICIAL",
-      "size": "726328754",
-      "url":  "https://josh.kyuu.nl/lineage-17.1-20200412-UNOFFICIAL-judyln.zip",
+      "size": "726363344",
+      "url":  "https://josh.kyuu.nl/lineage-17.1-20200413-UNOFFICIAL-judyln.zip",
       "version": "17.1"
     }
   ]
