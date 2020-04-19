@@ -1,0 +1,32 @@
+########################################
+COMMON CHANGES
+########################################
+ 
+commit 2ce6bb360bdb91ed6a659399b0ddc0e071fd4a64
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Sun Apr 12 08:18:11 2020 +0000
+
+    sdm845-common: add audio hal properties
+########################################
+ 
+########################################
+DEVICE CHANGES
+########################################
+ 
+commit a3f4031d65c2422dda3a5bac7d130ee6959002ae
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Tue Apr 14 08:57:08 2020 +0000
+
+    Judyln: include missing QDCM xml files
+########################################
+ 
+########################################
+KERNEL CHANGES ########
+########################################
+ 
+commit 7391321719f77b3ff53b842ce4b0faac49d407da
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Mar 26 14:24:18 2020 +0100
+
+    adjust gpu timeout
+########################################
