@@ -25,6 +25,7 @@ sed -i "s!${url}!${d}!" judyln.json
 
 rm -rf ~/web/*
 mv ../out/target/product/judyln/lineage-17.1-"${d}"-UNOFFICIAL-judyln.zip ~/web/
+cp changelog.md ~/web/
 git add judyln.json
 git add changelog.md
 git commit -m "new release"
