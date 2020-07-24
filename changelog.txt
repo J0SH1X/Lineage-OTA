@@ -2,31 +2,136 @@
 COMMON CHANGES
 ########################################
  
-commit 2ce6bb360bdb91ed6a659399b0ddc0e071fd4a64
-Author: j0sh1x <aljoshua.hell@gmail.com>
-Date:   Sun Apr 12 08:18:11 2020 +0000
+commit 7314db1eadd876ffb255db83e375ef4dfb7bb132
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Jul 24 09:17:22 2020 +0200
 
-    sdm845-common: add audio hal properties
+    sdm845-common: adapt to new ways of dac hal
+
+commit 810015ff34ecd5c0c18cab798431ea4da086af18
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Sat Jun 20 07:31:06 2020 +0000
+
+    sdm845: build vendor
+
+commit 6460d706052eed7c0629e4d968f3816f3633b61c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri May 1 13:02:58 2020 +0200
+
+    sdm845-common: downrev audio to 4.0
+    
+    * fixes some crashes of the audio service related to setMicrophoneFieldDimension which is an extension in 5.0
+
+commit 6c1ea36c85f20a1fa2ee34e8ec571c059605353f
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri May 1 10:57:32 2020 +0200
+
+    sdm845-common: change symlink for WCNSS config
+    
+    /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini -> /vendor/etc/wifi/WCNSS_qcom_cfg.ini
+    instead of: /mnt/vendor/persist-lg/WCNSS_qcom_cfg.ini (which isnt a link, but a firmware provided config)
+    
+    /vendor/etc/wifi/WCNSS_qcom_cfg.ini was ignored previously
+
+commit e851472b7068183030a19fd331184cbf33c01536
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri May 1 10:56:28 2020 +0200
+
+    sdm845-common: commonize symlink/folder creation in Android.mk
+
+commit 222a13ec43cadf27e6c9c36c7f2a24a44f76b7de
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri May 1 10:54:07 2020 +0200
 ########################################
  
 ########################################
 DEVICE CHANGES
 ########################################
  
-commit a3f4031d65c2422dda3a5bac7d130ee6959002ae
-Author: j0sh1x <aljoshua.hell@gmail.com>
-Date:   Tue Apr 14 08:57:08 2020 +0000
-
-    Judyln: include missing QDCM xml files
-########################################
- 
-########################################
-KERNEL CHANGES ########
-########################################
- 
-commit 7391321719f77b3ff53b842ce4b0faac49d407da
+commit 4387a669e1d6f8b7772b9957691a09c1327029b3
 Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Mar 26 14:24:18 2020 +0100
+Date:   Fri Jul 24 11:03:52 2020 +0200
 
-    adjust gpu timeout
+    judyln: fix includes of audio files
+
+commit f6da02c53fbeb17430e285fdc618402bdc678c75
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Jul 24 10:56:15 2020 +0200
+
+    judyln: fix calls always on speaker
+
+commit 46f2e47a8b9a7d925ac2b62c6bb2618c900f201b
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Fri May 22 13:27:23 2020 +0000
+
+    judyln: use judyln audio files
+
+commit 0089063f29d84aee8f3d252f9be630e8969e20f1
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri May 1 10:55:58 2020 +0200
+
+    judypn: move Android.mk symlinks to sdm845-common
+
+commit 20b2cee7aac0bbb6e5e5ba091b65068629c732f3
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Apr 27 18:24:33 2020 +0200
+
+    judypn: properly split audio configs to device specific and common
+
+commit a3c8718370feded157f2e8d582752c2ae7a61298
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Apr 16 17:57:49 2020 +0200
+
+    judypn: move compatibility matrix and manifest to common
+    
+    * they are nearly the same, judyln can just add the ISunlightEnhancement interface
+
+commit 3ff6f157b564430f595fe5b6ef4e91d216f75bec
+Author: SGCMarkus <markusornik@gmail.com>
+########################################
+ 
+########################################
+KERNEL CHANGES
+########################################
+ 
+commit 648c927b0aea9db7d3f36d80ba001ae420304a1d
+Author: Joshua Primero <jprimero155@gmail.com>
+Date:   Mon Jun 8 04:35:11 2020 +0000
+
+    defconfig: Enable KCAL
+    
+    Signed-off-by: Joshua Primero <jprimero155@gmail.com>
+
+commit b15eef1366d9b9bcfcf1e85852b6873af411b85a
+Author: Tyler Nijmeh <tylernij@gmail.com>
+Date:   Sat Jun 1 16:51:23 2019 -0700
+
+    mdss: mdp: Default to 270 kcal saturation
+    
+    sRGB and CE dull the colors of the display a bit. This helps keep the
+    colors vibrant yet still accurate.
+    
+    Signed-off-by: Tyler Nijmeh <tylernij@gmail.com>
+
+commit 83f61beed4fe01e675ddd31f533e78f8de112167
+Author: flar2 <asegaert@gmail.com>
+Date:   Tue Sep 13 00:44:20 2016 -0400
+
+    msm: mdss: KCAL: disable igc update
+    
+    Signed-off-by: Nathan Chancellor <natechancellor@gmail.com>
+    Signed-off-by: Akhil Narang <akhilnarang.1999@gmail.com>
+
+commit 7bf2ffb3cfb317c810149416b441116db25ecf32
+Author: tbalden <illespal@gmail.com>
+Date:   Sat Jul 16 14:17:25 2016 -0700
+
+    mdss mdp: kcal for mdss_mdp_v1_7
+    
+    Adding the kcal interface by savoca and
+    faux123
+    porting from m9 version by flar2
+    
+    Using the MDP 1_7 userspace structs to inject
+    configurations of kcal to the pp_cache configs.
 ########################################
