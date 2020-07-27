@@ -48,6 +48,12 @@ Date:   Fri May 1 10:56:28 2020 +0200
 DEVICE CHANGES
 ########################################
  
+commit ed83b0022733f175e75fa638c821a0f12635cc1e
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jul 27 19:12:53 2020 +0200
+
+    judyln: add updater permissions
+
 commit 42864670edaf76701aaf7c7bb4864ffd96579ca9
 Author: J0SH1X <aljoshua.hell@gmail.com>
 Date:   Mon Jul 27 15:04:37 2020 +0200
@@ -81,12 +87,6 @@ Date:   Fri May 22 13:27:23 2020 +0000
 commit 0089063f29d84aee8f3d252f9be630e8969e20f1
 Author: SGCMarkus <markusornik@gmail.com>
 Date:   Fri May 1 10:55:58 2020 +0200
-
-    judypn: move Android.mk symlinks to sdm845-common
-
-commit 20b2cee7aac0bbb6e5e5ba091b65068629c732f3
-Author: SGCMarkus <markusornik@gmail.com>
-Date:   Mon Apr 27 18:24:33 2020 +0200
 
 ########################################
  
