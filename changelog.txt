@@ -2,6 +2,12 @@
 COMMON CHANGES
 ########################################
  
+commit a933a6afce995fdcc1b0f375d9c379f8acc07e5a
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Jul 24 12:41:13 2020 +0200
+
+    judyln: were judyln not judypn
+
 commit 7314db1eadd876ffb255db83e375ef4dfb7bb132
 Author: J0SH1X <aljoshua.hell@gmail.com>
 Date:   Fri Jul 24 09:17:22 2020 +0200
@@ -36,18 +42,24 @@ Date:   Fri May 1 10:57:32 2020 +0200
 commit e851472b7068183030a19fd331184cbf33c01536
 Author: SGCMarkus <markusornik@gmail.com>
 Date:   Fri May 1 10:56:28 2020 +0200
-
-    sdm845-common: commonize symlink/folder creation in Android.mk
-
-commit 222a13ec43cadf27e6c9c36c7f2a24a44f76b7de
-Author: SGCMarkus <markusornik@gmail.com>
-Date:   Fri May 1 10:54:07 2020 +0200
 ########################################
  
 ########################################
 DEVICE CHANGES
 ########################################
  
+commit 42864670edaf76701aaf7c7bb4864ffd96579ca9
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jul 27 15:04:37 2020 +0200
+
+    judyln: use fbe
+
+commit 8a4b49405f9c52b2f5a3ba4f48d74b4bde406b46
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Jul 24 12:31:01 2020 +0200
+
+    judyln: include twrp by default
+
 commit 4387a669e1d6f8b7772b9957691a09c1327029b3
 Author: J0SH1X <aljoshua.hell@gmail.com>
 Date:   Fri Jul 24 11:03:52 2020 +0200
@@ -76,18 +88,6 @@ commit 20b2cee7aac0bbb6e5e5ba091b65068629c732f3
 Author: SGCMarkus <markusornik@gmail.com>
 Date:   Mon Apr 27 18:24:33 2020 +0200
 
-    judypn: properly split audio configs to device specific and common
-
-commit a3c8718370feded157f2e8d582752c2ae7a61298
-Author: SGCMarkus <markusornik@gmail.com>
-Date:   Thu Apr 16 17:57:49 2020 +0200
-
-    judypn: move compatibility matrix and manifest to common
-    
-    * they are nearly the same, judyln can just add the ISunlightEnhancement interface
-
-commit 3ff6f157b564430f595fe5b6ef4e91d216f75bec
-Author: SGCMarkus <markusornik@gmail.com>
 ########################################
  
 ########################################
