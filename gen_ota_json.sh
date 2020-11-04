@@ -15,8 +15,6 @@ oldurl=$(grep url judyln.json | cut -d ' ' -f 9)
 
 curl -T ../out/target/product/judyln/lineage-18.0-"${d}"-UNOFFICIAL-judyln.zip ftp://J0SH1X:ndrr2rMUXBds@uploads.androidfilehost.com/
 
-curl -T ./judyln.json ftp://J0SH1X:ndrr2rMUXBds@uploads.androidfilehost.com/
-
 #Generate the Changelog
 
 cd ../device/lge/sdm845-common/ && git log > ~/los/Lineage-OTA/changelog.txt.tmp && cd ~/los/Lineage-OTA/ && echo "########################################" > changelog.txt && echo "COMMON CHANGES" >> changelog.txt && echo "########################################" >> changelog.txt && echo " " >> changelog.txt && head -40 changelog.txt.tmp >> changelog.txt && echo "########################################" >> changelog.txt && rm changelog.txt.tmp && echo " " >> changelog.txt && echo "########################################" >> changelog.txt && echo "DEVICE CHANGES" >> changelog.txt && echo "########################################" >> changelog.txt && echo " " >> changelog.txt && cd ../device/lge/judyln && git log > ~/los/Lineage-OTA/changelog.txt.tmp && cd ~/los/Lineage-OTA/ && head -40 changelog.txt.tmp >> changelog.txt && echo "########################################" >> changelog.txt && rm changelog.txt.tmp && echo " " >> changelog.txt && echo "########################################" >> changelog.txt && echo "KERNEL CHANGES" >> changelog.txt && echo "########################################" >> changelog.txt && echo " " >> changelog.txt && cd ../kernel/lge/sdm845 && git log > ~/los/Lineage-OTA/changelog.txt.tmp && cd ~/los/Lineage-OTA && head -40 changelog.txt.tmp >> changelog.txt && echo "########################################" >> changelog.txt && rm changelog.txt.tmp
@@ -29,3 +27,4 @@ sed -i "s!${oldd}!${d}!" judyln.json
 #echo Enter the new Download URL
 #read -r url
 #sed -i "s!${oldurl}!\"${url}\",!g" judyln.json
+curl -T ./judyln.json ftp://J0SH1X:ndrr2rMUXBds@uploads.androidfilehost.com/
