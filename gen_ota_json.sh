@@ -24,6 +24,6 @@ sed -i "s!${oldmd5}! \"${md5}\",!g" judyln.json
 sed -i "s!${oldutc}! \"${utc}\",!g" judyln.json
 sed -i "s!${oldsize}! \"${size}\",!g" judyln.json
 sed -i "s!${oldd}!${d}!" judyln.json
-echo Enter the new Download URL
-read -r url
-sed -i "s!${oldurl}!\"${url}\",!g" judyln.json
+#echo Enter the new Download URL
+#read -r url
+#sed -i "s!${oldurl}!\"${url}\",!g" judyln.json
