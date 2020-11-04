@@ -2,18 +2,18 @@
 
 d=$(date +%Y%m%d)
 oldd=$(grep filename judyln.json | cut -d '-' -f 3)
-md5=$(md5sum ../out/target/product/judyln/lineage-17.1-"${d}"-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1)
+md5=$(md5sum ../out/target/product/judyln/lineage-18.0-"${d}"-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1)
 oldmd5=$(grep '"id"' judyln.json | cut -d':' -f 2)
 utc=$(grep ro.build.date.utc ../out/target/product/judyln/system/build.prop | cut -d '=' -f 2)
 oldutc=$(grep datetime judyln.json | cut -d ':' -f 2)
-size=$(wc -c ../out/target/product/judyln/lineage-17.1-"${d}"-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1)
+size=$(wc -c ../out/target/product/judyln/lineage-18.0-"${d}"-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1)
 oldsize=$(grep size judyln.json | cut -d ':' -f 2)
 oldurl=$(grep url judyln.json | cut -d ' ' -f 9)
 
 #Upload the rom to AndroidFileHost
 
 
-curl -T ../out/target/product/judyln/lineage-17.1-"${d}"-UNOFFICIAL-judyln.zip ftp://J0SH1X:ndrr2rMUXBds@uploads.androidfilehost.com/
+curl -T ../out/target/product/judyln/lineage-18.0-"${d}"-UNOFFICIAL-judyln.zip ftp://J0SH1X:ndrr2rMUXBds@uploads.androidfilehost.com/
 
 #Generate the Changelog
 
