@@ -1,30 +1,42 @@
 #!/bin/bash
 
+DEVICE=$1
+REPOS="${@:2}"
+
 d=$(date +%Y%m%d)
-oldd=$(grep filename judyln.json | cut -d '-' -f 3)
-md5=$(md5sum ../out/target/product/judyln/lineage-18.0-"${d}"-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1)
-oldmd5=$(grep '"id"' judyln.json | cut -d':' -f 2)
-utc=$(grep ro.build.date.utc ../out/target/product/judyln/system/build.prop | cut -d '=' -f 2)
-oldutc=$(grep datetime judyln.json | cut -d ':' -f 2)
-size=$(wc -c ../out/target/product/judyln/lineage-18.0-"${d}"-UNOFFICIAL-judyln.zip | cut -d ' ' -f 1)
-oldsize=$(grep size judyln.json | cut -d ':' -f 2)
-oldurl=$(grep url judyln.json | cut -d ' ' -f 9)
 
-#Upload the rom to AndroidFileHost
+FILENAME=lineage-18.0-"${d}"-UNOFFICIAL-"${DEVICE}".zip
 
+oldd=$(grep filename $DEVICE.json | cut -d '-' -f 3)
+md5=$(md5sum ../out/target/product/$DEVICE/$FILENAME | cut -d ' ' -f 1)
+oldmd5=$(grep '"id"' $DEVICE.json | cut -d':' -f 2)
+utc=$(grep ro.build.date.utc ../out/target/product/$DEVICE/system/build.prop | cut -d '=' -f 2)
+oldutc=$(grep datetime $DEVICE.json | cut -d ':' -f 2)
+size=$(wc -c ../out/target/product/$DEVICE/$FILENAME | cut -d ' ' -f 1)
+oldsize=$(grep size $DEVICE.json | cut -d ':' -f 2)
+oldurl=$(grep url $DEVICE.json | cut -d ' ' -f 9)
 
-curl -T ../out/target/product/judyln/lineage-18.0-"${d}"-UNOFFICIAL-judyln.zip ftp://J0SH1X:ndrr2rMUXBds@uploads.androidfilehost.com/
+# Generate the Changelog
+# Clear the changelog file
+echo "" > changelog.txt
 
-#Generate the Changelog
+for repo in ${REPOS[*]}
+do
+    echo "########################################" >> changelog.txt
+    echo "${repo} Changes:" >> changelog.txt
+    git --git-dir ../$repo/.git log --since=$oldutc >> changelog.txt
+done
 
-cd ../device/lge/sdm845-common/ && git log > ~/los/Lineage-OTA/changelog.txt.tmp && cd ~/los/Lineage-OTA/ && echo "########################################" > changelog.txt && echo "COMMON CHANGES" >> changelog.txt && echo "########################################" >> changelog.txt && echo " " >> changelog.txt && head -40 changelog.txt.tmp >> changelog.txt && echo "########################################" >> changelog.txt && rm changelog.txt.tmp && echo " " >> changelog.txt && echo "########################################" >> changelog.txt && echo "DEVICE CHANGES" >> changelog.txt && echo "########################################" >> changelog.txt && echo " " >> changelog.txt && cd ../device/lge/judyln && git log > ~/los/Lineage-OTA/changelog.txt.tmp && cd ~/los/Lineage-OTA/ && head -40 changelog.txt.tmp >> changelog.txt && echo "########################################" >> changelog.txt && rm changelog.txt.tmp && echo " " >> changelog.txt && echo "########################################" >> changelog.txt && echo "KERNEL CHANGES" >> changelog.txt && echo "########################################" >> changelog.txt && echo " " >> changelog.txt && cd ../kernel/lge/sdm845 && git log > ~/los/Lineage-OTA/changelog.txt.tmp && cd ~/los/Lineage-OTA && head -40 changelog.txt.tmp >> changelog.txt && echo "########################################" >> changelog.txt && rm changelog.txt.tmp
+echo "########################################" >> changelog.txt
 
 #This is where the magic happens
-sed -i "s!${oldmd5}! \"${md5}\",!g" judyln.json
-sed -i "s!${oldutc}! \"${utc}\",!g" judyln.json
-sed -i "s!${oldsize}! \"${size}\",!g" judyln.json
-sed -i "s!${oldd}!${d}!" judyln.json
-#echo Enter the new Download URL
-#read -r url
-#sed -i "s!${oldurl}!\"${url}\",!g" judyln.json
-curl -T ./judyln.json ftp://J0SH1X:ndrr2rMUXBds@uploads.androidfilehost.com/
+sed -i "s!${oldmd5}! \"${md5}\",!g" $DEVICE.json
+sed -i "s!${oldutc}! \"${utc}\",!g" $DEVICE.json
+sed -i "s!${oldsize}! \"${size}\",!g" $DEVICE.json
+sed -i "s!${oldd}!${d}!" $DEVICE.json
+#echo Generate Download URL
+TAG=$(echo "${DEVICE}-${d}")
+url="https://github.com/SGCMarkus/Lineage-OTA/releases/download/${TAG}/${FILENAME}"
+sed -i "s!${oldurl}!\"${url}\",!g" $DEVICE.json
+
+hub release create -a ../out/target/product/$DEVICE/$FILENAME -a changelog.txt "${TAG}"
