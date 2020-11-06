@@ -24,7 +24,7 @@ for repo in ${REPOS[*]}
 do
     echo "########################################" >> changelog.txt
     echo "${repo} Changes:" >> changelog.txt
-    git --git-dir ../$repo/.git log --since=$oldutc >> changelog.txt
+    git --git-dir ../"${repo}"/.git log --since="${oldutc}" >> changelog.txt
 done
 
 echo "########################################" >> changelog.txt
