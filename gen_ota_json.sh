@@ -39,4 +39,4 @@ TAG=$(echo "${DEVICE}-${d}")
 url="https://github.com/SGCMarkus/Lineage-OTA/releases/download/${TAG}/${FILENAME}"
 sed -i "s!${oldurl}!\"${url}\",!g" $DEVICE.json
 
-hub release create -a ../out/target/product/$DEVICE/$FILENAME -a changelog.txt "${TAG}"
+hub release create -a ../out/target/product/$DEVICE/$FILENAME -a changelog.txt -m "${TAG}" "${TAG}"
