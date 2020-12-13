@@ -5,4 +5,9 @@ device/lge/judyln Changes:
 device/lge/sdm845-common Changes:
 ########################################
 kernel/lge/sdm845 Changes:
+commit 231135714668fac662f894e7388376f50dd69e25
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sun Dec 13 18:50:35 2020 +0100
+
+    sdm845: remove non existant firmware file
 ########################################

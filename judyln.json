@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": "1605689833",
-      "filename": "lineage-18.0-20201118-UNOFFICIAL-judyln.zip",
-      "id": "4bf3a7b27aa9f1b43808cf3ad4d0ef15",
+      "datetime": "1607881890",
+      "filename": "lineage-18.0-20201213-UNOFFICIAL-judyln.zip",
+      "id": "8841ca1a1f3b2d2f8d8485a05aa4e522",
       "romtype": "UNOFFICIAL",
-      "size": "745718379",
-      "url":  "https://github.com/J0SH1X/Lineage-OTA/releases/download/judyln-20201118/lineage-18.0-20201118-UNOFFICIAL-judyln.zip",
+      "size": "745642430",
+      "url":  "https://github.com/J0SH1X/Lineage-OTA/releases/download/judyln-20201213/lineage-18.0-20201213-UNOFFICIAL-judyln.zip",
       "version": "18.0"
     }
   ]
