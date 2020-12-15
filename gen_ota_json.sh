@@ -5,7 +5,7 @@ REPOS="${@:2}"
 
 d=$(date +%Y%m%d)
 
-FILENAME=lineage-18.0-"${d}"-UNOFFICIAL-"${DEVICE}".zip
+FILENAME=lineage-18.1-"${d}"-UNOFFICIAL-"${DEVICE}".zip
 
 oldd=$(grep filename $DEVICE.json | cut -d '-' -f 3)
 md5=$(md5sum ../out/target/product/$DEVICE/$FILENAME | cut -d ' ' -f 1)
