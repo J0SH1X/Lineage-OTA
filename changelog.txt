@@ -3,11 +3,34 @@
 device/lge/judyln Changes:
 ########################################
 device/lge/sdm845-common Changes:
+commit e443bd38429872f9a580dbfbc573dee419fd1801
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Tue Dec 29 13:22:49 2020 +0100
+
+    Revert "Sdm845-common: Disable the fucking mac adress randomizer"
+    
+    This reverts commit 6ff9c17fff30a8412e77c95f59832df895de7137.
+
+commit a3716a9edfb11c3ae3f90a06bf9abde7357e1bd6
+Author: Emanuel <emanuelghub@gmail.com>
+Date:   Tue Dec 29 02:16:03 2020 +0400
+
+    Update powerhint, media profiles, pinner files, and build powerstats
+
+commit 6ff9c17fff30a8412e77c95f59832df895de7137
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Dec 18 12:07:49 2020 +0100
+
+    Sdm845-common: Disable the fucking mac adress randomizer
+    
+    this is so freaking annoying as one of the networks im using regularly has a mac adress filter in place im never able to connect to the network properly
 ########################################
 kernel/lge/sdm845 Changes:
-commit 231135714668fac662f894e7388376f50dd69e25
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sun Dec 13 18:50:35 2020 +0100
+commit 4970e45d01843eb79a13f676f4fac28a15c108a1
+Author: Sultan Alsawaf <sultan@kerneltoast.com>
+Date:   Wed Dec 16 12:13:08 2020 +0100
 
-    sdm845: remove non existant firmware file
+    sdm845: spoof safetynet props
+########################################
+vendor/lge Changes:
 ########################################
