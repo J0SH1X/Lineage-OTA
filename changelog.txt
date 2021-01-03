@@ -3,6 +3,11 @@
 device/lge/judyln Changes:
 ########################################
 device/lge/sdm845-common Changes:
+commit 8cbb238e7f45882265fafed4714fdb6672cd313e
+Author: root <root@thenotonly.com>
+Date:   Mon Dec 14 23:44:23 2020 +0400
+
+    Actually use los doze
 ########################################
 kernel/lge/sdm845 Changes:
 ########################################
