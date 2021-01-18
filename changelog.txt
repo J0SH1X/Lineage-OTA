@@ -1,72 +1,13 @@
 
 ########################################
 device/lge/betalm Changes:
-commit c98a8033d88a88e8313f9ca5e6aff5c39c1c76f5
+########################################
+device/lge/beta-common Changes:
+commit a127c2efc0ac1e3ccab455320dd8e45bc0d27795
 Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Fri Jan 15 14:58:23 2021 +0100
+Date:   Sun Jan 17 17:29:55 2021 +0100
 
-    Beta: beta-common not sm8150-common
-
-commit 222df3b619a68db0e20c49006cc1044bea25383c
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Fri Jan 15 14:54:49 2021 +0100
-
-    Beta-common:clean up init
-
-commit 3d8c8831f682d7b462a7d33677c9eac28042057f
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:50:49 2021 +0100
-
-    Betalm: use beta-common not flash-common
-
-commit 142b8a7c6f604dd98217fcb6b09a56150fcb0ca3
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:41:40 2021 +0100
-
-    Betalm: disable encryption for now
-
-commit 49f9afbd3e83cfbd3b6a87dde5437895de19efda
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:38:31 2021 +0100
-
-    Betalm: fixup device fingerprint
-
-commit 69cc8689c3472e2f3a194e2313bebfc21248b75e
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:35:25 2021 +0100
-
-    Betalm: depend on beta-common
-
-commit 51a9a3e57e7af9c47e2128e2c8ab936b52bfcee3
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:23:05 2021 +0100
-
-    Betalm: fix up proprietary files
-
-commit 2056bc4231c26cde2a5a643185ce2cee0d56623d
-Merge: 687115c 9f479e4
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 14:00:15 2021 +0100
-
-    Merge branch 'lineage-18.1' of https://github.com/J0SH1X/android_device_lge_betalm into lineage-18.1
-
-commit 687115c610eb6553b2c832aa5004d01378ab251e
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 13:57:00 2021 +0100
-
-    Betalm: Convert from Flashlmdd 2/X
-
-commit 9f479e42bfd345b90058881e2918001d6bceb5d0
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 13:57:00 2021 +0100
-
-    Betalm: Convert from Flashlmdd 2/X
-
-commit 21cca19ccc63d808bc38ce8e934f5358b92911a6
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 13:22:38 2021 +0100
-
-    Betalm: convert from flashlmdd
+    Beta-common: fix audio policys
 ########################################
 device/lge/sm8150-common Changes:
 commit 50fcc93086e25059fc8b3c1450208f78704a1db7
@@ -75,79 +16,5 @@ Date:   Sat Jan 16 18:19:23 2021 +0100
 
     sm8150-common: remove trust hal from manifest
 ########################################
-device/lge/beta-common Changes:
-commit 192d0658ac879ec306a82999bca1f8ea39b4499b
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 16 14:54:44 2021 +0100
-
-    Beta-common: support unofficial ota
-
-commit e754dbd474ed45f5ad167a93a0523dc5cc1dcfc8
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Fri Jan 15 15:22:23 2021 +0100
-
-    Beta-common: fix partition sizes
-
-commit a169a9d76236d58f18df8d3c4858da93fe32ab65
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 19:03:48 2021 +0100
-
-    Beta-common:update beta.mk
-
-commit bd4a8accd6a6dfa27b8cc8fbb5dc4e555cd3cc66
-Author: SGCMarkus <markusornik@gmail.com>
-Date:   Fri Feb 28 19:36:38 2020 +0100
-
-    Beta-common: fix up media profiles for aosp
-
-commit b290573a6b7f6391ee09ac99fc174ab96b94bcc2
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:32:42 2021 +0100
-
-    Beta-common:Proprietary-files.txt fix typo
-
-commit 498ee84c517c5e9d1cca2190cc9120d95a0d461e
-Merge: a2b60bc 030125a
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:10:40 2021 +0100
-
-    Merge branch 'lineage-18.1' of https://github.com/J0SH1X/android_device_lge_beta-common into lineage-18.1
-
-commit a2b60bcf68539a7637c83ccc218fec31cb40d5d5
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:07:19 2021 +0100
-
-    Beta-common:fix up proprietary files
-
-commit 030125a2289af031f8db7bfbed497370d5cbd43d
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 15:07:19 2021 +0100
-
-    Beta-common:fix up proprietary files
-
-commit 86b264b81902dd281ac32848cdf1183c70f5ce7b
-Merge: 7d78999 67e6925
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 14:31:52 2021 +0100
-
-    Merge branch 'lineage-18.1' of https://github.com/J0SH1X/android_device_lge_beta-common into lineage-18.1
-
-commit 7d78999e41af67247bc67ecdebb409f472625218
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 14:04:37 2021 +0100
-
-    Beta-common: Convert from Flash-common
-
-commit 67e69251d171012d2cb9ec47451f17914c7de702
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Thu Jan 14 14:04:37 2021 +0100
-
-    Beta-common: Convert from Flash-common
-########################################
 kernel/lge/sm8150 Changes:
-commit ce5a965bab68072fe254be2ae666e1fcdea6a96d
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 16 12:26:48 2021 +0100
-
-    sm8150: fix betalm compilation
 ########################################

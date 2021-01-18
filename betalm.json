@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": "1610805304",
-      "filename": "lineage-18.1-20210116-UNOFFICIAL-betalm.zip",
-      "id": "80b88ac74dfce6c018963a5db882f3a8",
+      "datetime": "1610960758",
+      "filename": "lineage-18.1-20210118-UNOFFICIAL-betalm.zip",
+      "id": "2c2cc82877555b4d92db735ce97de095",
       "romtype": "UNOFFICIAL",
-      "size": "874769439",
-      "url":  "https://github.com/J0SH1X/Lineage-OTA/releases/download/betalm-20210116/lineage-18.1-20210116-UNOFFICIAL-judyln.zip",
+      "size": "874755355",
+      "url":  "https://github.com/J0SH1X/Lineage-OTA/releases/download/betalm-20210118/lineage-18.1-20210118-UNOFFICIAL-judyln.zip",
       "version": "18.1"
     }
   ]
