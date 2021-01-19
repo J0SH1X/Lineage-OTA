@@ -1,20 +1,75 @@
 
 ########################################
 device/lge/betalm Changes:
+commit dd683008d4d1303cac105edd0549584806f46409
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Tue Jan 19 10:32:04 2021 +0100
+
+    Revert "Betalm: enable metadata encryption"
+    
+    This reverts commit bbab228074390468aaff00fc14882ae54b7bfb89.
+
+commit bbab228074390468aaff00fc14882ae54b7bfb89
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jan 18 21:39:07 2021 +0100
+
+    Betalm: enable metadata encryption
 ########################################
 device/lge/beta-common Changes:
-commit a127c2efc0ac1e3ccab455320dd8e45bc0d27795
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sun Jan 17 17:29:55 2021 +0100
-
-    Beta-common: fix audio policys
 ########################################
 device/lge/sm8150-common Changes:
-commit 50fcc93086e25059fc8b3c1450208f78704a1db7
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 16 18:19:23 2021 +0100
-
-    sm8150-common: remove trust hal from manifest
 ########################################
 kernel/lge/sm8150 Changes:
+commit 887d0578dffdd4caff66889e93ace234e67305f1
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jan 18 17:52:27 2021 +0100
+
+    Sm8150:dts: enable dai_quat_tdm_rx_1
+
+commit 5bfec179aaad85c7a525ed5d85963b3ebb965c0e
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jan 18 13:40:28 2021 +0100
+
+    Revert "ARM64: dts: lge panels: Enable ULPS on panels where disabled"
+    
+    This reverts commit 2eadf69cec36156e6538a144ac47c13f3e0c60cf.
+
+commit b41e655195b2e35a139b3508b9b541257daad014
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jan 18 13:32:28 2021 +0100
+
+    Revert "USB: gadget: f_mass_storage: Support DriveDroid"
+    
+    This reverts commit 25c86645571b12a47ebc897323a3ad63d6bd3e26.
+
+commit bd9c3096d30ea5ba1d4a4da4bb39894187af33b2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Jan 18 13:06:09 2021 +0100
+
+    arm64: dts: lge: import more display configs from beta kernel source
+    
+    * also update some display configs for beta
+
+commit 25c86645571b12a47ebc897323a3ad63d6bd3e26
+Author: Diab Neiroukh <lazerl0rd@thezest.dev>
+Date:   Fri Aug 28 18:03:06 2020 +0100
+
+    USB: gadget: f_mass_storage: Support DriveDroid
+    
+    To do so, we must adjust and guard around LG's gadget customisations.
+    
+    Co-authored-by: Xsavi Xander <xsavixander@gmail.com>
+    Signed-off-by: Diab Neiroukh <lazerl0rd@thezest.dev>
+
+commit 2e68a2acaa24b71537c0bbe2a826dbcecaf69d75
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jan 18 10:53:56 2021 +0100
+
+    SM8150: export correct cmdline for offmode charging
+########################################
+vendor/lge/betalm Changes:
+########################################
+vendor/lge/beta-common Changes:
+########################################
+vendor/lge/sm8150-common Changes:
 ########################################
