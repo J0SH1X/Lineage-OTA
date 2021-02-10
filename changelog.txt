@@ -3,25 +3,13 @@
 device/lge/betalm Changes:
 ########################################
 device/lge/beta-common Changes:
-commit b64c8b453790a15e5be46226f58a9093b5cbcadf
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 23 11:34:30 2021 +0100
-
-    Beta-common: Nuke QuadDacPanel
-
-commit fa8af01fa01fc5e2bd24905614a423b25833d5f4
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 23 11:34:13 2021 +0100
-
-    Beta-common: rework overlays
-
-commit dbb5ebc0f871bb274694a23aa0aa5657bb29de28
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Tue Jan 19 12:30:18 2021 +0100
-
-    Beta-common: fix headphone jack not working
 ########################################
-device/lge/sm815-common Changes:
+device/lge/sm8150-common Changes:
+commit 37fe0d98f9f543246dd8359a5141c6bd17260e53
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Wed Feb 10 16:39:22 2021 +0000
+
+    Sm8150-common: remove trusthal from manifest its a snippet now
 ########################################
 kernel/lge/sm8150 Changes:
 ########################################
