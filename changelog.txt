@@ -1,31 +1,14 @@
 
 ########################################
 device/oneplus/fajita Changes:
-commit 84bcab8252e3726454bfc2d5ad46416ab60d9712
-Author: TaeHagen <tae.hagen@gmail.com>
-Date:   Thu Dec 30 15:15:06 2021 -0700
-
-    udfps config
-
-commit e7fb373bb255b5e0da590a9e586ce7b2e9ee702f
-Author: TaeHagen <tae.hagen@gmail.com>
-Date:   Thu Dec 30 15:14:49 2021 -0700
-
-    Accidentally removed import and cleanup
-
-commit 716a8bdb652c5286e552e44f7eda0caea7da0d66
-Author: TaeHagen <tae.hagen@gmail.com>
-Date:   Thu Dec 30 14:20:47 2021 -0700
-
-    fingerprint fix
-
-commit 26a613c33836c97cf84776fe106ba24fe4f94578
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Mon Nov 22 11:32:51 2021 +0000
-
-    add missing blobs for sensors
 ########################################
 device/oneplus/sdm845-common Changes:
+commit 55de0a7c79d3c45b5c30e8569c719c80350d83c6
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sun Jan 2 00:38:13 2022 +0000
+
+    sdm845: rename livdisplay to vendor variant
+
 commit 6710a23d51174e81f6abe7350d4b942f099af930
 Author: J0SH1X <aljoshua.hell@gmail.com>
 Date:   Sat Jan 1 23:59:56 2022 +0000
@@ -49,113 +32,8 @@ Author: J0SH1X <aljoshua.hell@gmail.com>
 Date:   Sat Jan 1 23:23:21 2022 +0000
 
     sdm845-common: enable keyhabler and livedisplay
-
-commit 0b3a7cf78b86710737a4fa21f24bf6272b7f8420
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Tue Nov 23 10:51:40 2021 +0100
-
-    fix bt audio and incall audio
-
-commit eac1e5beda7458c7089babeaf4630da978edbfc8
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Tue Nov 23 00:05:23 2021 +0100
-
-    Revert "feat(Audio): Switch audio HAL to V7"
-    
-    This reverts commit ec9fb9799e8b3bcbd14f1b367be379d68da97907.
-
-commit 5ab4ffc214a70eac67646148ce59aaae1c72057e
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Tue Nov 23 00:05:16 2021 +0100
-
-    various stuff
 ########################################
 hardware/oneplus Changes:
-commit 4949354e576ff1428fe523c6fb21b45b32721d4d
-Author: Jeongik Cha <jeongik@google.com>
-Date:   Sun Oct 10 12:57:43 2021 +0530
-
-    aidl/vibrator: Use new vibrator NDK platform
-    
-    Change-Id: I191e1b942dea3a5cb38e79b8a05803a8b72acdc7
-
-commit b5993015b102cef4322dfeed564d084d184f5e45
-Author: alk3pInjection <webmaster@raspii.tech>
-Date:   Thu Nov 25 15:04:03 2021 +0530
-
-    hidl: fingerprint: Bypass dimming killer on enroll/auth
-    
-    Subsequent to I87c861e945eb8728dfd656b20de7ba4fe50b0f09.
-    
-    This fixes the HBM flicker when registering fp for the first time.
-    
-    Change-Id: I3bb713419fece7ef202c43c0782973ebb14805ae
-
-commit 195f97daa499dccdab04419dac03dbab885ca9f0
-Author: TheScarastic <warabhishek@gmail.com>
-Date:   Sat Oct 30 08:30:42 2021 +0200
-
-    hidl: fingerprint: Uprev to 2.3
-    
-     * Move fingerprint HIDL to 2.3
-     * Remove Lineage FOD HIDL
-     * Rename fodextension to udfpsextension
-    
-    Change-Id: I8c628d2ee9158b45eeb04dd324b56ef3697296b7
-
-commit c68eaacb6395c257a563151d2c4a780e055918f6
-Author: Abhishek Aggarwal <warabhishek@gmail.com>
-Date:   Fri Nov 5 19:48:48 2021 +0000
-
-    KeyHandler: use the CollapsingToolBarActivity in S
-    
-    Change-Id: I2305e0d00f73b262296c88095ec9bbebdb4ecad7
-
-commit 257de24e26acaec093dc4de94ef8243792019f23
-Author: Pierre-Hugues Husson <phh@phh.me>
-Date:   Wed Jun 24 15:59:40 2020 +0200
-
-    hw/oneplus: Import Goodix reverse engineered interface.
-    
-    Change-Id: I49384962c417d93ccb1d708b8b219c73328561e9
-
-commit b6afc0a7a110f807584227ada2db82564395cd4e
-Author: TheScarastic <warabhishek@gmail.com>
-Date:   Thu Oct 14 01:19:10 2021 +0530
-
-    hardware/oneplus: doze: Adapt to S style
-    
-    * Reference https://github.com/TheScarastic/android_device_xiaomi_raphael/commit/e7db7fc560787440784b6c9787da2e1ab2695f59
-    
-    * Adapted and rewritten in Kt
-    
-    * Use Theme.SubSettingsBase for theme
-    * Replace PreferenceActivity with CollapsingToolbarBaseActivity
-    * Add Titles to prefernce screen
-    * Cleanup
-    * Remove onOptionsItemSelected and where neccessary move to activity
-    
-    Change-Id: I4d35ade6f45022944df4db787948c03b5bc14e5f
-    Signed-off-by: Rohan Hasabe <rohanhasabe8@gmail.com>
-
-commit 9218adb68e98ca38699bb5176c06fa8be72011d4
-Author: Anay Wadhera <awadhera@berkeley.edu>
-Date:   Sun Oct 17 17:12:48 2021 +0200
-
-    doze: Drop minSdkVersion
-    
-    Change-Id: Idbbe6713999ca8b942b2bf91cc899118e22a062b
-
-commit 24927e6d20993d47d90decb155195176d437c1f2
-Author: Micheal <mkbestas@lineageos.org>
-Date:   Sun Oct 17 17:01:03 2021 +0200
-
-    doze: Add an exported flag in manifest
-    
-    Targeting S+ (version 31 and above) requires that an explicit value
-    for android:exported be defined when intent filters are present
-    
-    Change-Id: I12d27c23624eb5259da582b86ac1bd7572754f0c
 ########################################
 kernel/oneplus/sdm845 Changes:
 commit 04098d43f92360590c876d2af6fdf60dbaa58a8a
@@ -368,19 +246,4 @@ Date:   Sat Jan 1 18:38:11 2022 +0000
     Revert "update blobs"
     
     This reverts commit 8e0c52f5768c03d955da0e70873cd2299846fbac.
-
-commit bdf650e9fbfe2a29b2154403ff5ec5cd449bb7d1
-Merge: 8e0c52f 9a73c42
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Fri Dec 31 00:34:56 2021 +0100
-
-    Merge pull request #1 from TaeHagen/Arrow-12.0
-    
-    Fix FP HBM, import binaries from latest OxygenOS
-
-commit 9a73c42d048598d6e4f5f2e0b331fd66b14e73fc
-Author: TaeHagen <tae.hagen@gmail.com>
-Date:   Thu Dec 30 14:34:40 2021 -0700
-
-    Fix FP HBM, import binaries from latest OxygenOS
 ########################################
