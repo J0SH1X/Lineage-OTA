@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": "1637577788",
-      "filename": "lineage-19.0-20211123-UNOFFICIAL-fajita.zip",
-      "id": "faf9900ec3063ef7c9177d2863775ba11505a7cde588c4fd280a2a672f557663",
+      "datetime": "1641050734",
+      "filename": "lineage-19.0-20220102-UNOFFICIAL-fajita.zip",
+      "id": "0469d5c9d13ecd4e67e8bcef7cf583b0",
       "romtype": "UNOFFICIAL",
-      "size": "853395770",
-      "url":  "https://github.com/J0SH1X/Lineage-OTA/releases/download/fajita-20211123/lineage-19.0-20211123-UNOFFICIAL-fajita.zip",
+      "size": "863458146",
+      "url":  "https://github.com/J0SH1X/Lineage-OTA/releases/download/fajita-20220102/lineage-19.0-20211123-UNOFFICIAL-fajita.zip",
       "version": "19.0"
     }
   ]

@@ -1,6 +1,24 @@
 
 ########################################
 device/oneplus/fajita Changes:
+commit 84bcab8252e3726454bfc2d5ad46416ab60d9712
+Author: TaeHagen <tae.hagen@gmail.com>
+Date:   Thu Dec 30 15:15:06 2021 -0700
+
+    udfps config
+
+commit e7fb373bb255b5e0da590a9e586ce7b2e9ee702f
+Author: TaeHagen <tae.hagen@gmail.com>
+Date:   Thu Dec 30 15:14:49 2021 -0700
+
+    Accidentally removed import and cleanup
+
+commit 716a8bdb652c5286e552e44f7eda0caea7da0d66
+Author: TaeHagen <tae.hagen@gmail.com>
+Date:   Thu Dec 30 14:20:47 2021 -0700
+
+    fingerprint fix
+
 commit 26a613c33836c97cf84776fe106ba24fe4f94578
 Author: J0SH1X <aljoshua.hell@gmail.com>
 Date:   Mon Nov 22 11:32:51 2021 +0000
@@ -8,6 +26,36 @@ Date:   Mon Nov 22 11:32:51 2021 +0000
     add missing blobs for sensors
 ########################################
 device/oneplus/sdm845-common Changes:
+commit 6710a23d51174e81f6abe7350d4b942f099af930
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 1 23:59:56 2022 +0000
+
+    rename livedisplay to vendor.livedisplay
+
+commit e609241659819085c6e9862fb531db5aefa2b757
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 1 23:42:26 2022 +0000
+
+    sdm845-common: set updater property
+
+commit 8125de3a3e3cdb0cbfadd29017d4be6da312d8d3
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 1 23:23:40 2022 +0000
+
+    sdm845-common: ship livedisplay
+
+commit d08b43a8de9fd777cf2b6ca024768440d49eed4f
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 1 23:23:21 2022 +0000
+
+    sdm845-common: enable keyhabler and livedisplay
+
+commit 0b3a7cf78b86710737a4fa21f24bf6272b7f8420
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Tue Nov 23 10:51:40 2021 +0100
+
+    fix bt audio and incall audio
+
 commit eac1e5beda7458c7089babeaf4630da978edbfc8
 Author: J0SH1X <aljoshua.hell@gmail.com>
 Date:   Tue Nov 23 00:05:23 2021 +0100
@@ -23,8 +71,316 @@ Date:   Tue Nov 23 00:05:16 2021 +0100
     various stuff
 ########################################
 hardware/oneplus Changes:
+commit 4949354e576ff1428fe523c6fb21b45b32721d4d
+Author: Jeongik Cha <jeongik@google.com>
+Date:   Sun Oct 10 12:57:43 2021 +0530
+
+    aidl/vibrator: Use new vibrator NDK platform
+    
+    Change-Id: I191e1b942dea3a5cb38e79b8a05803a8b72acdc7
+
+commit b5993015b102cef4322dfeed564d084d184f5e45
+Author: alk3pInjection <webmaster@raspii.tech>
+Date:   Thu Nov 25 15:04:03 2021 +0530
+
+    hidl: fingerprint: Bypass dimming killer on enroll/auth
+    
+    Subsequent to I87c861e945eb8728dfd656b20de7ba4fe50b0f09.
+    
+    This fixes the HBM flicker when registering fp for the first time.
+    
+    Change-Id: I3bb713419fece7ef202c43c0782973ebb14805ae
+
+commit 195f97daa499dccdab04419dac03dbab885ca9f0
+Author: TheScarastic <warabhishek@gmail.com>
+Date:   Sat Oct 30 08:30:42 2021 +0200
+
+    hidl: fingerprint: Uprev to 2.3
+    
+     * Move fingerprint HIDL to 2.3
+     * Remove Lineage FOD HIDL
+     * Rename fodextension to udfpsextension
+    
+    Change-Id: I8c628d2ee9158b45eeb04dd324b56ef3697296b7
+
+commit c68eaacb6395c257a563151d2c4a780e055918f6
+Author: Abhishek Aggarwal <warabhishek@gmail.com>
+Date:   Fri Nov 5 19:48:48 2021 +0000
+
+    KeyHandler: use the CollapsingToolBarActivity in S
+    
+    Change-Id: I2305e0d00f73b262296c88095ec9bbebdb4ecad7
+
+commit 257de24e26acaec093dc4de94ef8243792019f23
+Author: Pierre-Hugues Husson <phh@phh.me>
+Date:   Wed Jun 24 15:59:40 2020 +0200
+
+    hw/oneplus: Import Goodix reverse engineered interface.
+    
+    Change-Id: I49384962c417d93ccb1d708b8b219c73328561e9
+
+commit b6afc0a7a110f807584227ada2db82564395cd4e
+Author: TheScarastic <warabhishek@gmail.com>
+Date:   Thu Oct 14 01:19:10 2021 +0530
+
+    hardware/oneplus: doze: Adapt to S style
+    
+    * Reference https://github.com/TheScarastic/android_device_xiaomi_raphael/commit/e7db7fc560787440784b6c9787da2e1ab2695f59
+    
+    * Adapted and rewritten in Kt
+    
+    * Use Theme.SubSettingsBase for theme
+    * Replace PreferenceActivity with CollapsingToolbarBaseActivity
+    * Add Titles to prefernce screen
+    * Cleanup
+    * Remove onOptionsItemSelected and where neccessary move to activity
+    
+    Change-Id: I4d35ade6f45022944df4db787948c03b5bc14e5f
+    Signed-off-by: Rohan Hasabe <rohanhasabe8@gmail.com>
+
+commit 9218adb68e98ca38699bb5176c06fa8be72011d4
+Author: Anay Wadhera <awadhera@berkeley.edu>
+Date:   Sun Oct 17 17:12:48 2021 +0200
+
+    doze: Drop minSdkVersion
+    
+    Change-Id: Idbbe6713999ca8b942b2bf91cc899118e22a062b
+
+commit 24927e6d20993d47d90decb155195176d437c1f2
+Author: Micheal <mkbestas@lineageos.org>
+Date:   Sun Oct 17 17:01:03 2021 +0200
+
+    doze: Add an exported flag in manifest
+    
+    Targeting S+ (version 31 and above) requires that an explicit value
+    for android:exported be defined when intent filters are present
+    
+    Change-Id: I12d27c23624eb5259da582b86ac1bd7572754f0c
 ########################################
 kernel/oneplus/sdm845 Changes:
+commit 04098d43f92360590c876d2af6fdf60dbaa58a8a
+Author: Peter Cai <peter@typeblog.net>
+Date:   Sat Aug 31 17:51:53 2019 +0800
+
+    drivers: qcacld: reverse fw-provided mac addr
+    
+    * When wlan_mac.bin is missing for whatever reason, qcacld will fall
+      back to loading mac address from firmware. The OnePlus firmware can
+      provide a correct mac address, but it is in reverse, breaking the
+      qcacld logic.
+    * Just reverse it back in qcacld. Although wlan_mac.bin should not be
+      missing at all, we have seen some rare cases where it could not be
+      generated properly for some reason, and the qcacld fallback is broken
+      because of byte-ordering. Let's at least make the fallback path work.
+    
+    Change-Id: Iccdc4657debec1375939dca7a4ce4df5e76f255f
+    Signed-off-by: mcdachpappe <noreference@web.de>
+    Signed-off-by: DennySPb <dennyspb@gmail.com>
+
+commit a4b1fa64394969ab83a507f1c6fc452bae2fa93f
+Author: Danny Lin <danny@kdrag0n.dev>
+Date:   Fri Jul 26 19:21:13 2019 -0700
+
+    qcacld-3.0: Select necessary wireless extensions
+    
+    Signed-off-by: Danny Lin <danny@kdrag0n.dev>
+    Signed-off-by: DennySPb <dennyspb@gmail.com>
+
+commit ea674e766b38e45eba233a362e9d607045630c1b
+Author: Julian Liu <wlootlxt123@gmail.com>
+Date:   Mon May 3 23:06:38 2021 +0530
+
+    qcacld-3.0: Free a bunch of pkts at once
+    
+    It is too bad to do a tight loop every adding pkt. When the hotspot is turned on, I notice that the
+    htt_htc_misc_pkt_list_trim() function consumes at least 5% of CPU time. By caching the head of pkt
+    queue and freeing multiple pkts at once to reduce CPU consumption.
+    
+    Signed-off-by: Julian Liu <wlootlxt123@gmail.com>
+    Signed-off-by: DennySPb <dennyspb@gmail.com>
+
+commit 09ec3d485fe931a6d979d04e63025cbd91168e5a
+Author: Park Ju Hyung <qkrwngud825@gmail.com>
+Date:   Sun Feb 24 01:59:51 2019 +0900
+
+    Reapply f611619e ("qcacld: reduce log spam")
+    
+    Signed-off-by: Park Ju Hyung <qkrwngud825@gmail.com>
+    Signed-off-by: Rapherion Rollerscaperers <rapherion@raphielgang.org>
+    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
+    Signed-off-by: DennySPb <dennyspb@gmail.com>
+
+commit 3033249762a255d0f74d756198df64cfdd4ac927
+Author: Park Ju Hyung <qkrwngud825@gmail.com>
+Date:   Sun Feb 24 01:37:43 2019 +0900
+
+    Reapply: 695a4b50 ("qcacld: default_config: tone down debugging")
+    
+    Signed-off-by: Park Ju Hyung <qkrwngud825@gmail.com>
+    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
+    Signed-off-by: DennySPb <dennyspb@gmail.com>
+
+commit 9df70300c0ebc89f8139be4897c0631c498223d5
+Author: Park Ju Hyung <qkrwngud825@gmail.com>
+Date:   Thu Mar 7 11:11:33 2019 +0900
+
+    Reapply c65600ea ("qcacld: nuke rx_wakelock code entirely")
+    
+    We're not allowing this to be configurable on this kernel.
+    
+    Nuke this entirely to reduce resource usage.
+    
+    Signed-off-by: Park Ju Hyung <qkrwngud825@gmail.com>
+    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
+    Signed-off-by: DennySPb <dennyspb@gmail.com>
+
+commit 8bdd1ba3343414b6cd3d410ac53d201dcfa035b4
+Author: Danny Lin <danny@kdrag0n.dev>
+Date:   Sun Aug 9 22:20:08 2020 -0700
+
+    Reapply 9dbef905 ("qcacld-3.0: Fix regulatory domain country names")
+    
+    Clang warns:
+    
+    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:284:43: warning: suspicious concatenation of string literals in an array initialization; did you mean to separate the elements with a comma? [-Wstring-concatenation]
+            {CTRY_TURKS_AND_CAICOS, FCC3_WORLD, "TC" "TURKS AND CAICOS"},
+                                                     ^
+                                                    ,
+    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:284:38: note: place parentheses around the string literal to silence warning
+            {CTRY_TURKS_AND_CAICOS, FCC3_WORLD, "TC" "TURKS AND CAICOS"},
+                                                ^
+    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:296:45: warning: suspicious concatenation of string literals in an array initialization; did you mean to separate the elements with a comma? [-Wstring-concatenation]
+            {CTRY_WALLIS_AND_FUTUNA, ETSI1_WORLD, "WF" "WALLIS"},
+                                                       ^
+                                                      ,
+    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:296:40: note: place parentheses around the string literal to silence warning
+            {CTRY_WALLIS_AND_FUTUNA, ETSI1_WORLD, "WF" "WALLIS"},
+                                                  ^
+    
+    Signed-off-by: Danny Lin <danny@kdrag0n.dev>
+    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
+    Signed-off-by: DennySPb <dennyspb@gmail.com>
+
+commit 08539f3a6fc5d9a0d78533f34a2a64827e935120
+Author: Nick Desaulniers <ndesaulniers@google.com>
+Date:   Fri Sep 25 21:19:18 2020 -0700
+
+    lib/string.c: implement stpcpy
+    
+    commit 1e1b6d63d6340764e00356873e5794225a2a03ea upstream.
+    
+    LLVM implemented a recent "libcall optimization" that lowers calls to
+    `sprintf(dest, "%s", str)` where the return value is used to
+    `stpcpy(dest, str) - dest`.
+    
+    This generally avoids the machinery involved in parsing format strings.
+    `stpcpy` is just like `strcpy` except it returns the pointer to the new
+    tail of `dest`.  This optimization was introduced into clang-12.
+    
+    Implement this so that we don't observe linkage failures due to missing
+    symbol definitions for `stpcpy`.
+    
+    Similar to last year's fire drill with: commit 5f074f3e192f
+    ("lib/string.c: implement a basic bcmp")
+    
+    The kernel is somewhere between a "freestanding" environment (no full
+    libc) and "hosted" environment (many symbols from libc exist with the
+    same type, function signature, and semantics).
+    
+    As Peter Anvin notes, there's not really a great way to inform the
+    compiler that you're targeting a freestanding environment but would like
+    to opt-in to some libcall optimizations (see pr/47280 below), rather
+    than opt-out.
+    
+    Arvind notes, -fno-builtin-* behaves slightly differently between GCC
+    and Clang, and Clang is missing many __builtin_* definitions, which I
+    consider a bug in Clang and am working on fixing.
+    
+    Masahiro summarizes the subtle distinction between compilers justly:
+      To prevent transformation from foo() into bar(), there are two ways in
+      Clang to do that; -fno-builtin-foo, and -fno-builtin-bar.  There is
+      only one in GCC; -fno-buitin-foo.
+    
+    (Any difference in that behavior in Clang is likely a bug from a missing
+    __builtin_* definition.)
+    
+    Masahiro also notes:
+      We want to disable optimization from foo() to bar(),
+      but we may still benefit from the optimization from
+      foo() into something else. If GCC implements the same transform, we
+      would run into a problem because it is not -fno-builtin-bar, but
+      -fno-builtin-foo that disables that optimization.
+    
+      In this regard, -fno-builtin-foo would be more future-proof than
+      -fno-built-bar, but -fno-builtin-foo is still potentially overkill. We
+      may want to prevent calls from foo() being optimized into calls to
+      bar(), but we still may want other optimization on calls to foo().
+    
+    It seems that compilers today don't quite provide the fine grain control
+    over which libcall optimizations pseudo-freestanding environments would
+    prefer.
+    
+    Finally, Kees notes that this interface is unsafe, so we should not
+    encourage its use.  As such, I've removed the declaration from any
+    header, but it still needs to be exported to avoid linkage errors in
+    modules.
+    
+    Reported-by: Sami Tolvanen <samitolvanen@google.com>
+    Suggested-by: Andy Lavr <andy.lavr@gmail.com>
+    Suggested-by: Arvind Sankar <nivedita@alum.mit.edu>
+    Suggested-by: Joe Perches <joe@perches.com>
+    Suggested-by: Kees Cook <keescook@chromium.org>
+    Suggested-by: Masahiro Yamada <masahiroy@kernel.org>
+    Suggested-by: Rasmus Villemoes <linux@rasmusvillemoes.dk>
+    Signed-off-by: Nick Desaulniers <ndesaulniers@google.com>
+    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
+    Tested-by: Nathan Chancellor <natechancellor@gmail.com>
+    Cc: <stable@vger.kernel.org>
+    Link: https://lkml.kernel.org/r/20200914161643.938408-1-ndesaulniers@google.com
+    Link: https://bugs.llvm.org/show_bug.cgi?id=47162
+    Link: https://bugs.llvm.org/show_bug.cgi?id=47280
+    Link: https://github.com/ClangBuiltLinux/linux/issues/1126
+    Link: https://man7.org/linux/man-pages/man3/stpcpy.3.html
+    Link: https://pubs.opengroup.org/onlinepubs/9699919799/functions/stpcpy.html
+    Link: https://reviews.llvm.org/D85963
+    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
+    Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+    Signed-off-by: Lee Jones <lee.jones@linaro.org>
+    Change-Id: I01f7436f21e95dced193036fef38f95f684797d1
 ########################################
 vendor/oneplus Changes:
+commit 49f522951bac70b14f507e36f2328c66fabce127
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 1 23:21:34 2022 +0000
+
+    sdm845-common: copy libsdm-disp-apis.qti.so also to vendor
+
+commit a31cad055e08b59b29ffa442d043a4a1d784a0b3
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 1 21:05:06 2022 +0000
+
+    sdm845-common add librmnetctl library
+
+commit 37e6dad8a7168a3dfbc015a80242e09f6de33f05
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 1 18:38:11 2022 +0000
+
+    Revert "update blobs"
+    
+    This reverts commit 8e0c52f5768c03d955da0e70873cd2299846fbac.
+
+commit bdf650e9fbfe2a29b2154403ff5ec5cd449bb7d1
+Merge: 8e0c52f 9a73c42
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Dec 31 00:34:56 2021 +0100
+
+    Merge pull request #1 from TaeHagen/Arrow-12.0
+    
+    Fix FP HBM, import binaries from latest OxygenOS
+
+commit 9a73c42d048598d6e4f5f2e0b331fd66b14e73fc
+Author: TaeHagen <tae.hagen@gmail.com>
+Date:   Thu Dec 30 14:34:40 2021 -0700
+
+    Fix FP HBM, import binaries from latest OxygenOS
 ########################################
