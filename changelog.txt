@@ -1,249 +1,131 @@
 
 ########################################
 device/oneplus/fajita Changes:
+commit 657d66043f8b64a753b6cab7d2c2f8aa3d80187e
+Author: shawnlin <shawnlin@google.com>
+Date:   Fri Sep 17 20:15:34 2021 +0800
+
+    fajita: Remove resource overlays for system bar heights
+    
+    With the new added APIs, we don't need to overlay status_bar_height that
+    contains cutout size and quick_qs_offset_height anymore.
+    
+    Bug: 186604541
+    Test: make
+    Change-Id: I36d869866ed03d3996b7b0d8cc6d3f6bb6ab624d
 ########################################
-device/oneplus/sdm845-common Changes:
-commit 55de0a7c79d3c45b5c30e8569c719c80350d83c6
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sun Jan 2 00:38:13 2022 +0000
-
-    sdm845: rename livdisplay to vendor variant
-
-commit 6710a23d51174e81f6abe7350d4b942f099af930
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 1 23:59:56 2022 +0000
-
-    rename livedisplay to vendor.livedisplay
-
-commit e609241659819085c6e9862fb531db5aefa2b757
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 1 23:42:26 2022 +0000
-
-    sdm845-common: set updater property
-
-commit 8125de3a3e3cdb0cbfadd29017d4be6da312d8d3
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 1 23:23:40 2022 +0000
-
-    sdm845-common: ship livedisplay
-
-commit d08b43a8de9fd777cf2b6ca024768440d49eed4f
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 1 23:23:21 2022 +0000
-
-    sdm845-common: enable keyhabler and livedisplay
-########################################
-hardware/oneplus Changes:
+device/oneplus/sdm845 Changes:
 ########################################
 kernel/oneplus/sdm845 Changes:
-commit 04098d43f92360590c876d2af6fdf60dbaa58a8a
-Author: Peter Cai <peter@typeblog.net>
-Date:   Sat Aug 31 17:51:53 2019 +0800
+commit 8bce3f4b06035ec5ab93acd1ec08b03488fc38af
+Author: Edwin Moquete <edwinmmoquete@gmail.com>
+Date:   Sun Apr 10 23:06:50 2022 +0000
 
-    drivers: qcacld: reverse fw-provided mac addr
+    Merge tag 'LA.UM.10.3.r1-01700-sdm845.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api into HEAD
     
-    * When wlan_mac.bin is missing for whatever reason, qcacld will fall
-      back to loading mac address from firmware. The OnePlus firmware can
-      provide a correct mac address, but it is in reverse, breaking the
-      qcacld logic.
-    * Just reverse it back in qcacld. Although wlan_mac.bin should not be
-      missing at all, we have seen some rare cases where it could not be
-      generated properly for some reason, and the qcacld fallback is broken
-      because of byte-ordering. Let's at least make the fallback path work.
+    "LA.UM.10.3.r1-01700-sdm845.0"
     
-    Change-Id: Iccdc4657debec1375939dca7a4ce4df5e76f255f
-    Signed-off-by: mcdachpappe <noreference@web.de>
-    Signed-off-by: DennySPb <dennyspb@gmail.com>
-
-commit a4b1fa64394969ab83a507f1c6fc452bae2fa93f
-Author: Danny Lin <danny@kdrag0n.dev>
-Date:   Fri Jul 26 19:21:13 2019 -0700
-
-    qcacld-3.0: Select necessary wireless extensions
-    
-    Signed-off-by: Danny Lin <danny@kdrag0n.dev>
-    Signed-off-by: DennySPb <dennyspb@gmail.com>
-
-commit ea674e766b38e45eba233a362e9d607045630c1b
-Author: Julian Liu <wlootlxt123@gmail.com>
-Date:   Mon May 3 23:06:38 2021 +0530
-
-    qcacld-3.0: Free a bunch of pkts at once
-    
-    It is too bad to do a tight loop every adding pkt. When the hotspot is turned on, I notice that the
-    htt_htc_misc_pkt_list_trim() function consumes at least 5% of CPU time. By caching the head of pkt
-    queue and freeing multiple pkts at once to reduce CPU consumption.
-    
-    Signed-off-by: Julian Liu <wlootlxt123@gmail.com>
-    Signed-off-by: DennySPb <dennyspb@gmail.com>
-
-commit 09ec3d485fe931a6d979d04e63025cbd91168e5a
-Author: Park Ju Hyung <qkrwngud825@gmail.com>
-Date:   Sun Feb 24 01:59:51 2019 +0900
-
-    Reapply f611619e ("qcacld: reduce log spam")
-    
-    Signed-off-by: Park Ju Hyung <qkrwngud825@gmail.com>
-    Signed-off-by: Rapherion Rollerscaperers <rapherion@raphielgang.org>
-    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
-    Signed-off-by: DennySPb <dennyspb@gmail.com>
-
-commit 3033249762a255d0f74d756198df64cfdd4ac927
-Author: Park Ju Hyung <qkrwngud825@gmail.com>
-Date:   Sun Feb 24 01:37:43 2019 +0900
-
-    Reapply: 695a4b50 ("qcacld: default_config: tone down debugging")
-    
-    Signed-off-by: Park Ju Hyung <qkrwngud825@gmail.com>
-    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
-    Signed-off-by: DennySPb <dennyspb@gmail.com>
-
-commit 9df70300c0ebc89f8139be4897c0631c498223d5
-Author: Park Ju Hyung <qkrwngud825@gmail.com>
-Date:   Thu Mar 7 11:11:33 2019 +0900
-
-    Reapply c65600ea ("qcacld: nuke rx_wakelock code entirely")
-    
-    We're not allowing this to be configurable on this kernel.
-    
-    Nuke this entirely to reduce resource usage.
-    
-    Signed-off-by: Park Ju Hyung <qkrwngud825@gmail.com>
-    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
-    Signed-off-by: DennySPb <dennyspb@gmail.com>
-
-commit 8bdd1ba3343414b6cd3d410ac53d201dcfa035b4
-Author: Danny Lin <danny@kdrag0n.dev>
-Date:   Sun Aug 9 22:20:08 2020 -0700
-
-    Reapply 9dbef905 ("qcacld-3.0: Fix regulatory domain country names")
-    
-    Clang warns:
-    
-    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:284:43: warning: suspicious concatenation of string literals in an array initialization; did you mean to separate the elements with a comma? [-Wstring-concatenation]
-            {CTRY_TURKS_AND_CAICOS, FCC3_WORLD, "TC" "TURKS AND CAICOS"},
-                                                     ^
-                                                    ,
-    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:284:38: note: place parentheses around the string literal to silence warning
-            {CTRY_TURKS_AND_CAICOS, FCC3_WORLD, "TC" "TURKS AND CAICOS"},
-                                                ^
-    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:296:45: warning: suspicious concatenation of string literals in an array initialization; did you mean to separate the elements with a comma? [-Wstring-concatenation]
-            {CTRY_WALLIS_AND_FUTUNA, ETSI1_WORLD, "WF" "WALLIS"},
-                                                       ^
-                                                      ,
-    ../drivers/staging/qcacld-3.0/core/cds/src/cds_regdomain.c:296:40: note: place parentheses around the string literal to silence warning
-            {CTRY_WALLIS_AND_FUTUNA, ETSI1_WORLD, "WF" "WALLIS"},
-                                                  ^
-    
-    Signed-off-by: Danny Lin <danny@kdrag0n.dev>
-    Signed-off-by: Chenyang Zhong <zhongcy95@gmail.com>
-    Signed-off-by: DennySPb <dennyspb@gmail.com>
-
-commit 08539f3a6fc5d9a0d78533f34a2a64827e935120
-Author: Nick Desaulniers <ndesaulniers@google.com>
-Date:   Fri Sep 25 21:19:18 2020 -0700
-
-    lib/string.c: implement stpcpy
-    
-    commit 1e1b6d63d6340764e00356873e5794225a2a03ea upstream.
-    
-    LLVM implemented a recent "libcall optimization" that lowers calls to
-    `sprintf(dest, "%s", str)` where the return value is used to
-    `stpcpy(dest, str) - dest`.
-    
-    This generally avoids the machinery involved in parsing format strings.
-    `stpcpy` is just like `strcpy` except it returns the pointer to the new
-    tail of `dest`.  This optimization was introduced into clang-12.
-    
-    Implement this so that we don't observe linkage failures due to missing
-    symbol definitions for `stpcpy`.
-    
-    Similar to last year's fire drill with: commit 5f074f3e192f
-    ("lib/string.c: implement a basic bcmp")
-    
-    The kernel is somewhere between a "freestanding" environment (no full
-    libc) and "hosted" environment (many symbols from libc exist with the
-    same type, function signature, and semantics).
-    
-    As Peter Anvin notes, there's not really a great way to inform the
-    compiler that you're targeting a freestanding environment but would like
-    to opt-in to some libcall optimizations (see pr/47280 below), rather
-    than opt-out.
-    
-    Arvind notes, -fno-builtin-* behaves slightly differently between GCC
-    and Clang, and Clang is missing many __builtin_* definitions, which I
-    consider a bug in Clang and am working on fixing.
-    
-    Masahiro summarizes the subtle distinction between compilers justly:
-      To prevent transformation from foo() into bar(), there are two ways in
-      Clang to do that; -fno-builtin-foo, and -fno-builtin-bar.  There is
-      only one in GCC; -fno-buitin-foo.
-    
-    (Any difference in that behavior in Clang is likely a bug from a missing
-    __builtin_* definition.)
-    
-    Masahiro also notes:
-      We want to disable optimization from foo() to bar(),
-      but we may still benefit from the optimization from
-      foo() into something else. If GCC implements the same transform, we
-      would run into a problem because it is not -fno-builtin-bar, but
-      -fno-builtin-foo that disables that optimization.
-    
-      In this regard, -fno-builtin-foo would be more future-proof than
-      -fno-built-bar, but -fno-builtin-foo is still potentially overkill. We
-      may want to prevent calls from foo() being optimized into calls to
-      bar(), but we still may want other optimization on calls to foo().
-    
-    It seems that compilers today don't quite provide the fine grain control
-    over which libcall optimizations pseudo-freestanding environments would
-    prefer.
-    
-    Finally, Kees notes that this interface is unsafe, so we should not
-    encourage its use.  As such, I've removed the declaration from any
-    header, but it still needs to be exported to avoid linkage errors in
-    modules.
-    
-    Reported-by: Sami Tolvanen <samitolvanen@google.com>
-    Suggested-by: Andy Lavr <andy.lavr@gmail.com>
-    Suggested-by: Arvind Sankar <nivedita@alum.mit.edu>
-    Suggested-by: Joe Perches <joe@perches.com>
-    Suggested-by: Kees Cook <keescook@chromium.org>
-    Suggested-by: Masahiro Yamada <masahiroy@kernel.org>
-    Suggested-by: Rasmus Villemoes <linux@rasmusvillemoes.dk>
-    Signed-off-by: Nick Desaulniers <ndesaulniers@google.com>
-    Signed-off-by: Andrew Morton <akpm@linux-foundation.org>
-    Tested-by: Nathan Chancellor <natechancellor@gmail.com>
-    Cc: <stable@vger.kernel.org>
-    Link: https://lkml.kernel.org/r/20200914161643.938408-1-ndesaulniers@google.com
-    Link: https://bugs.llvm.org/show_bug.cgi?id=47162
-    Link: https://bugs.llvm.org/show_bug.cgi?id=47280
-    Link: https://github.com/ClangBuiltLinux/linux/issues/1126
-    Link: https://man7.org/linux/man-pages/man3/stpcpy.3.html
-    Link: https://pubs.opengroup.org/onlinepubs/9699919799/functions/stpcpy.html
-    Link: https://reviews.llvm.org/D85963
-    Signed-off-by: Linus Torvalds <torvalds@linux-foundation.org>
-    Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-    Signed-off-by: Lee Jones <lee.jones@linaro.org>
-    Change-Id: I01f7436f21e95dced193036fef38f95f684797d1
+    Change-Id: Iaea9ef898c66442836a3cc2a1d2b1f77e85ccbd7
 ########################################
 vendor/oneplus Changes:
-commit 49f522951bac70b14f507e36f2328c66fabce127
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 1 23:21:34 2022 +0000
+commit 914ca8e68ab633e4c241b1ea7271eb2ac75fd9a7
+Author: LuK1337 <priv.luk@gmail.com>
+Date:   Mon Apr 11 12:05:19 2022 +0200
 
-    sdm845-common: copy libsdm-disp-apis.qti.so also to vendor
-
-commit a31cad055e08b59b29ffa442d043a4a1d784a0b3
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 1 21:05:06 2022 +0000
-
-    sdm845-common add librmnetctl library
-
-commit 37e6dad8a7168a3dfbc015a80242e09f6de33f05
-Author: J0SH1X <aljoshua.hell@gmail.com>
-Date:   Sat Jan 1 18:38:11 2022 +0000
-
-    Revert "update blobs"
+    guacamoleb: Extract from OnePlus7Oxygen_14.P.42_OTA_0420_all_2202112205_2c6f5649
     
-    This reverts commit 8e0c52f5768c03d955da0e70873cd2299846fbac.
+    Change-Id: I50bdf9b4de2a1fc124840e2983065971ce86e41e
+
+commit b2ec4f50aa614ef3a1ee1d701ff99747f8c35880
+Author: Georg Veichtlbauer <georg@vware.at>
+Date:   Wed Apr 6 15:48:50 2022 +0200
+
+    msm8998-common: Shim lib-imsvideocodec
+    
+    Change-Id: I6249b3fba12693f48290947af383a8d6da8fefee
+
+commit fbb9537b5b197f5450b4b5db579745be9fbbe761
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Wed Jul 28 19:58:58 2021 +0200
+
+    hotdog: Add device specific arcsoft/chi libs
+    
+    These were previously in sm8150-common.
+    
+    Change-Id: I558e8ebc854f17ed5f0f1e43ba48d205e966d369
+
+commit d02861a373d73ca9aa2ec766a3d66698a7bb274c
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Wed Jul 28 19:58:58 2021 +0200
+
+    hotdog: Add device specific arcsoft/chi libs
+    
+    These were previously in sm8150-common.
+    
+    Change-Id: I558e8ebc854f17ed5f0f1e43ba48d205e966d369
+
+commit 7882c53349752d4a6fa09dec6a350eb42cfb30fe
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Wed Jul 28 19:58:58 2021 +0200
+
+    guacamole: Add device specific arcsoft/chi libs
+    
+    These were previously in sm8150-common.
+    
+    Change-Id: I558e8ebc854f17ed5f0f1e43ba48d205e966d369
+
+commit 0d08319485fd1bd8ea61baca11e392069d494f8c
+Author: Vaisakh Murali <vaisakhmurali@gmail.com>
+Date:   Wed Jul 28 19:58:58 2021 +0200
+
+    sm8150-common: Decommonize some camera blobs
+    
+    This way hotdogb can access to its ultrawide camera lens and the lens
+    switching experience is better overall.
+    
+    Change-Id: I77c9aaa5624fa33da10b58e7024e873173e7d1dd
+
+commit 0bd154f514631333fb3e595647dd77b6fbd9e8d3
+Author: LuK1337 <priv.luk@gmail.com>
+Date:   Wed Apr 6 18:58:31 2022 +0200
+
+    sdm845-common: Add PASR HIDL interface libs
+    
+    libqti-perfd.so depends on these.
+    
+    Change-Id: Ib8a68aa9407fe3817bda2680a693ac68f4464500
+
+commit 06cf853a95b39d093f29a3497f6886da88b7df61
+Author: Timi Rautamäki <timi.rautamaki@gmail.com>
+Date:   Mon Mar 28 16:33:05 2022 +0000
+
+    msm8998-common: drop prebuilt sensorservice
+    
+    Change-Id: Ia0fb8f0d258555e68f8db7a7cbe8ae982c0798d9
+
+commit 2d49006c793e221d7087ca60ea64c78ea39807f0
+Author: Timi Rautamäki <timi.rautamaki@gmail.com>
+Date:   Mon Mar 28 16:32:05 2022 +0000
+
+    msm8998-common: regenerate
+    
+    Change-Id: Ib2cb4b6dee03e22767591162b716b81b21425f42
+
+commit 9a7c3b17f5238059d3787aebb6f01f9d21066602
+Author: Timi Rautamäki <timi.rautamaki@gmail.com>
+Date:   Mon Mar 28 16:28:02 2022 +0000
+
+    Import msm8998-common family from lineage-18.1 (eb530b8)
+    
+    Change-Id: I31d35f6c6861ce4002ca0438c0ff10bf3c4a8e15
+
+commit 05e433ce97465ec22b8eda0c4e6b2fccfddb8f67
+Author: LuK1337 <priv.luk@gmail.com>
+Date:   Tue Mar 22 21:55:14 2022 +0100
+
+    enchilada: Pull patched fingerprint init rc from stock
+    
+    Commented out 'writepid' should speed up auth a bit.
+    
+    Change-Id: Ida62664e725fc3e594155cd2db3a157bb3188df2
 ########################################
