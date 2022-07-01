@@ -27,6 +27,7 @@ changelogdevicecommonpath=device/$manufacturer/$devicecommonrepo
 changelogkernelpath=kernel/$manufacturer/$deviceplatform
 changelogvendorpath=vendor/$manufacturer
 REPOS=(${changelogdevicepath} ${changelogdevicecommonpath} ${changelogkernelpath} ${changelogvendorpath})
+GITORIGIN=$(git config --get remote.origin.url | cut -d '/' -f4)
 
 # Generate the Changelog
 # Clear the changelog file
@@ -48,7 +49,7 @@ sed -i "s!${oldsize}! \"${size}\",!g" $DEVICE.json
 sed -i "s!${oldd}!${d}!" $DEVICE.json
 #echo Generate Download URL
 TAG=$(echo "${DEVICE}-${d}")
-url="https://github.com/J0SH1X/Lineage-OTA/releases/download/${TAG}/${FILENAME}"
+url="https://github.com/${GITORIGIN}/Lineage-OTA/releases/download/${TAG}/${FILENAME}"
 sed -i "s!${oldurl}!\"${url}\",!g" $DEVICE.json
 
 git add $DEVICE.json
