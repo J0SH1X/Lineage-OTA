@@ -1,10 +1,1165 @@
 
 ########################################
 device/lge/betalm Changes:
+commit 5ad8471c7181a2d7c7b80ee3c29756c7d0848718
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Tue Jun 28 10:33:10 2022 +0000
+
+    Remove fstab its in common now
+
+commit d920203f0cdb247668825325d2c620910b352e71
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Oct 25 14:55:04 2021 +0200
+
+    flashlmdd: add missing dependency of sensors.sar.so
+
+commit 77e79457705000f76ce87a6a4108fa968e932e18
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 13:53:25 2021 +0200
+
+    flashlmdd: add more camera configs
+
+commit 1a832b85dff8e04ac4991fdbcd3464e51ae3416f
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 12:11:13 2021 +0200
+
+    flashlmdd: add sensors.sar.so to blobs
+
+commit eef219bb877fb015f30ad68115f6b3f87492d242
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Oct 22 23:15:12 2021 +0200
+
+    flashlmdd: device device name
+    
+    define device name so we can use it in sm8150-common to copy fstab/init files properly
+
+commit 1541565376ba1921cc4094558ac34b6218bab789
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu May 6 12:18:28 2021 +0200
+
+    flashlmdd: extract-utils: patchelf doesnt work for our camera hals, use sed instead
+
+commit 561a2120d87906349fc5739e67684a5fe10e842e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Jan 27 15:11:25 2021 +0100
+
+    flashlmdd: Switch to standalone extract utils
+    
+    * Align with templates while we are at it
+
+commit 071a4926d616341a13e8d76a8215221b02e4505b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Jan 6 12:18:45 2021 +0100
+
+    sm8150-common: switch to source provided patchelf binary
+
+commit bbab228074390468aaff00fc14882ae54b7bfb89
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Mon Jan 18 21:39:07 2021 +0100
+
+    Betalm: enable metadata encryption
+
+commit c98a8033d88a88e8313f9ca5e6aff5c39c1c76f5
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Jan 15 14:58:23 2021 +0100
+
+    Beta: beta-common not sm8150-common
+
+commit 222df3b619a68db0e20c49006cc1044bea25383c
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Jan 15 14:54:49 2021 +0100
+
+    Beta-common:clean up init
+
+commit 3d8c8831f682d7b462a7d33677c9eac28042057f
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:50:49 2021 +0100
+
+    Betalm: use beta-common not flash-common
+
+commit 142b8a7c6f604dd98217fcb6b09a56150fcb0ca3
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:41:40 2021 +0100
+
+    Betalm: disable encryption for now
+
+commit 49f9afbd3e83cfbd3b6a87dde5437895de19efda
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:38:31 2021 +0100
+
+    Betalm: fixup device fingerprint
+
+commit 69cc8689c3472e2f3a194e2313bebfc21248b75e
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:35:25 2021 +0100
+
+    Betalm: depend on beta-common
+
+commit 51a9a3e57e7af9c47e2128e2c8ab936b52bfcee3
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:23:05 2021 +0100
+
+    Betalm: fix up proprietary files
+
+commit 2056bc4231c26cde2a5a643185ce2cee0d56623d
+Merge: 687115c 9f479e4
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 14:00:15 2021 +0100
+
+    Merge branch 'lineage-18.1' of https://github.com/J0SH1X/android_device_lge_betalm into lineage-18.1
+
+commit 687115c610eb6553b2c832aa5004d01378ab251e
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 13:57:00 2021 +0100
+
+    Betalm: Convert from Flashlmdd 2/X
+
+commit 9f479e42bfd345b90058881e2918001d6bceb5d0
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 13:57:00 2021 +0100
+
+    Betalm: Convert from Flashlmdd 2/X
+
+commit 21cca19ccc63d808bc38ce8e934f5358b92911a6
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 13:22:38 2021 +0100
+
+    Betalm: convert from flashlmdd
+
+commit 6819d848cc344c5e204b164cc75ed781fe6e5118
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Oct 16 18:13:49 2020 +0200
+
+    flashlmdd: camera: patch libc++ dependency to use v29 version
+
+commit c8d94037b9d007dfdb5b1a9f7fb3734b245b2672
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Oct 16 17:55:13 2020 +0200
+
+    flashlmdd: update to V500EM 20m
+
+commit 4ad8170b678976d2d4d00db8fd12733ee14b80ad
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Aug 20 09:51:19 2020 +0200
+
+    flashlmdd: rework to use flash-common
+
+commit c4ef342667a3ea0dacb91dbf12b66e6caf41734e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Aug 18 17:21:48 2020 +0200
+
+    flashlmdd: set voice assistant device model id
+
+commit 784c87be76d57ba41854ef5fe39a3446b6767a7e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Aug 18 15:21:13 2020 +0200
+
+    flashlmdd: decommonize persist.vendor.audio.voicecall.speaker.stereo
+    
+    also add persist.vendor.lge.audio.voice.clarity
+
+commit b07d0cd2ea497f34375f051e9154ef44bf2124ea
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Aug 18 15:08:38 2020 +0200
+
+    flashlmdd: remove property blacklist
+    
+    using property_override in init now
+
+commit 52aa79dbbb4e0eaf0061094b07db9476274a22ae
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Aug 7 12:29:42 2020 +0200
+
+    flashlmdd: update ro.vendor.lge.swversion to V50020k
+    
+    used by RIL blobs
+
+commit 2748387654e05f14abeb896ab0d9acb731b23ea6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Aug 7 10:48:07 2020 +0200
+
+    flashlmdd: update fingerprint to V500EM20k
+
+commit eb8a8b62fde3c2364d960e127f11502d38eb58d4
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Aug 7 10:47:47 2020 +0200
+
+    flashlmdd: update security patch to 2020-07-01
+
+commit 06de772af687ab6883354bd311cb5bc5636a028e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 30 20:41:34 2020 +0200
+
+    flashlmdd: rootdir: cleanup
+
+commit 5ba584b655e617ed12a614c0f17024a802c3832f
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Jul 28 20:48:28 2020 +0200
+
+    flashlmdd: add information about source of (un)pinned blobs
+
+commit 73f57ad44926c6c41a150d0f140a7d19565c92a1
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Jul 24 22:32:10 2020 +0200
+
+    flashlmdd: set proper TARGET_VENDOR_PRODUCT_NAME and property blacklist
+
+commit 53deb1ca8e599696d3e352c91c3cbeac61678999
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Jul 24 22:05:21 2020 +0200
+
+    flashlmdd: switch to metadata encryption
+    
+    * FDE didnt wanna work
+
+commit b514966e59f02e19cf14faa0d67ffe5ae9194a6c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 23 11:05:33 2020 +0200
+
+    flashlmdd: remove unneeded mounts and its restorecons in init
+
+commit f0119775356d0aca83a214a009fbcb8fcddd7535
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 23 11:04:10 2020 +0200
+
+    flashlmdd: switch to vendor.lge.hardware.audio.dac.control@1.0-service
+
+commit 04c5d6fae0e1ad9f297a0ce50583f6bfa1da2ca2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 23 11:02:41 2020 +0200
+
+    flashlmdd: remove device specific manifest, dac.control uses vintf now
+
+commit c3dc319e63195d410a5b1fdce8c43d5662b2f9af
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Jul 10 15:53:07 2020 +0200
+
+    flashlmdd: partially revert 2b51480
+    
+    * we arent certified anymore with the new one
+
+commit 2b51480f52e0bbfba08d4a780ae80da266447cb0
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Jul 7 16:49:12 2020 +0200
+
+    flashlmdd: update vendor security patch to 2020-05-01 for V500EM 20i
+
+commit 9f50a280c91a66005f5f85e30846f21b5ba2a53d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Jul 7 16:47:23 2020 +0200
+
+    flashlmdd: properly set build fingerprint
+
+commit d9854bdc3c4f62b1276a9b472c51e986da20b000
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 2 11:59:51 2020 +0200
+
+    flashlmdd: change manifest level to 3
+    
+    * 4 isnt supported by audio hal 4.0
+
+commit 8da5a7364b354fa838db8a87a3e28c76427e6269
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Apr 13 18:45:10 2020 +0200
+
+    flashlmdd: add lge.hardware.audio.dac.control service and manifest entry
+
+commit 245968201e8acedabcd4034533cb31a74e65a7f7
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Apr 12 21:16:06 2020 +0200
+
+    flashlmdd: Override PRODUCT_DEVICE instead of TARGET_DEVICE
+    
+    * TARGET_DEVICE isn't really used for generating props
+      anymore as tools/buildinfo_common.sh is using
+      PRODUCT_DEVICE instead.
+
+commit e60d3210f7013c337aa2518c1c1dba5958eab67b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Apr 12 11:08:39 2020 +0200
+
+    flashlmdd: switch to TARGET_<SYSTEM/VENDOR>_PROP override
+
+commit 3bc979c8540346400c4a4ba0374406df70ca1161
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Apr 11 14:43:42 2020 +0200
+
+    flashlmdd: update to V500EM20g
+
+commit 8f98951c14bca63316a147c2a02dc611c90c7347
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Mar 25 11:30:49 2020 +0100
+
+    flashlmdd: build DAC Panel from LGE sm8150-common tree
+
+commit 2a8d1fd22fee6fbdb6fc519e5574586c5cd223c2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Mar 25 11:26:35 2020 +0100
+
+    flashlmdd: enable intrusive LED
+
+commit abcd65ace6b797b24d7facce3b0b7d073e381a4c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Mar 14 14:53:32 2020 +0100
+
+    flashlmdd: add device specific RIL props for ECC list
+
+commit 07b525d398be979b976685e4818e8517b2fd94e9
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Mar 14 14:41:19 2020 +0100
+
+    flashlmdd: fix recovery mounts and notch height
+
+commit d5c739906675d0778504810a8342a13137478033
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Mar 5 13:55:40 2020 +0100
+
+    flashlmdd: add device specific audio configs, move common configs to sm8150-common
+
+commit 287093a2990e14f468de0f155c4a789b6805f64d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 2 19:04:50 2020 +0100
+
+    flashlmdd: add cpfirmware for widevine
+
+commit 932ecc1a2370565e44e9a58ac9d7ed499cd3b054
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 19:53:04 2020 +0100
+
+    flashlmdd: stock statusbar height, autobrightness values and updated notch
+
+commit f119febf0deffc6b8f7ab6068f8eb7aa1dd9e11d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 19:42:11 2020 +0100
+
+    flashlmdd: add stock power_profile
+
+commit 55a8e96fc5596dbc3dc377eea997abdcf15407b0
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 18:56:15 2020 +0100
+
+    flashlmdd: add and copy dual display idc and keylayout
+
+commit 4d85aafacfa139e050d9ff994ba9a93a81c34812
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 18:52:02 2020 +0100
+
+    flashlmdd: 2 more audio configs from stock
+
+commit 798ea8772fab06f9ffe6c4d7aee37e627bf43e31
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 18:50:11 2020 +0100
+
+    flashlmdd: more camera blobs
+
+commit bbbb60e95aa30704b29e34370d8c640130a21555
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 16:39:09 2020 +0100
+
+    flashlmdd: camera: add eeprom files
+
+commit 227ca57f03946b8a41e9247e5ea7a430165b9731
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 16:20:39 2020 +0100
+
+    flashlmdd: add acdbdata
+
+commit b1dbab9863eea0714b127957d80d51606604f59a
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 23:47:02 2020 +0100
+
+    flashlmdd: rework audio configs
+    
+    * copy mixer paths
+    * dont use LGs weird structure
+
+commit 741c7806175a3edbd2adf89874f518501a8c935d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 23:46:28 2020 +0100
+
+    flashlmdd: add missing bt firmware
+
+commit 1af68b0d77388977c5113cd55622ea48aa993196
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 23:45:59 2020 +0100
+
+    flashlmdd: add initial overlay
+
+commit 73f7465c2cf55faec7ba7337e8d671ea2800da26
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:36:55 2020 +0100
+
+    flashlmdd: dont forceencrypt, twrp cant deal with that
+
+commit 0cbfb950dd754406326eba86753943bdc87e5287
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:36:38 2020 +0100
+
+    flashlmdd: fix media profiles for aosp
+
+commit 384a48ac698c9d2386ff17c23c3d6d95882aa9b3
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:36:15 2020 +0100
+
+    flashlmdd: correct copy path
+
+commit 9ce688e965bf0243ea6f95024af39eb678c23ac6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:06:07 2020 +0100
+
+    flashlmdd: set target screen density
+
+commit eeede36ce37a21461a7d11763506c0e63dc868ff
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:05:40 2020 +0100
+
+    flashlmdd: add bluetooth include
+
+commit 5d19bead82e0a4e08b36d701395654c62391a901
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 15:55:30 2020 +0100
+
+    flashlmdd: media: correct paths for media configs
+
+commit 9ab1bf6ba80699ea7cfb92fa8dfc8a0a3fe5c9a6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 11:49:50 2020 +0100
+
+    flashlmdd: set screen size
+
+commit a4a381e2bb9337c52ef32b035494f1987fd2d09b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 11:49:32 2020 +0100
+
+    flashlmdd: add missing 64bit camera.msmnile.so
+
+commit f5d0b74eeb23d211c4048c3194c921327e8a4ca6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 21:13:43 2020 +0100
+
+    flashlmdd: add stock rootdir
+
+commit 90587996a586673a982a73a10e33069e4d63f13c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 20:59:57 2020 +0100
+
+    flashlmdd: add missing blobs
+
+commit 8e90c50593dbe59976c52665acaf7e1a4b56c53e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 17:42:06 2020 +0100
+
+    flashlmdd: we build libstdc++ on vendor, fix name of camera lib
+
+commit 79517e560f6067bb0b487403c30560a6fc06ee7a
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 17:41:38 2020 +0100
+
+    flashlmdd: sec_config is in sm8150-common
+
+commit 3c410a1877cc201c8f22f570e07d2a82c535a6f5
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 17:41:11 2020 +0100
+
+    flashlmdd: add missing audio configs (sound trigger)
+
+commit 3bc4c7e82d456dad2ef39c2b5ea4a29e2bc8ab2f
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 16:47:19 2020 +0100
+
+    flashlmdd: lighthal is commonized, NFC configs are in proprietary files
+
+commit 93e4a211ebfc83f83e9d78d2b6d0d6ba9ee14387
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:45:06 2020 +0100
+
+    flashlmdd: device specific sensor configs
+
+commit b51d6494f9c7d05efee9aa95f42af15a5619687c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:30:19 2020 +0100
+
+    flashlmdd: mode NFC proprietary file to common
+
+commit 66f1c69c299921a3f9ea40b48534125e8fe0d812
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:20:06 2020 +0100
+
+    flashlmdd: add device specific media configs
+
+commit f7b356d568b8a8474a3e189c353ce17057e3c825
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:12:19 2020 +0100
+
+    flashlmdd: add device specific audio configs
+
+commit 5fa5e09824f6c0597e80779ef4e812e34f7dd765
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Feb 23 16:22:28 2020 +0100
+
+    flashlmdd: add initial proprietary files
+
+commit 6b02059b070a4259899a89caacdd624c25915a92
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Feb 23 16:07:18 2020 +0100
+
+    flashlmdd: product and vendor partition sizes commonized
+
+commit f20347a57a8feb8da809fd4c16e206eb35df8fdb
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Feb 23 15:52:30 2020 +0100
+
+    flashlmdd: Initial bringup
 ########################################
 device/lge/beta-common Changes:
+commit 4ca1cd7bc030ceed7e75fb0a8b956e89ec30c709
+Author: Anh Tran <anh.tran.3889@gmail.com>
+Date:   Mon Apr 18 19:22:10 2022 +0700
+
+    flash-common: sepolicy now is moved to sm8150-common
+
+commit 926b2dcb685ce6a224fd0337879732f5cf767a14
+Author: Anh Tran <anh.tran.3889@gmail.com>
+Date:   Mon Apr 18 19:19:12 2022 +0700
+
+    flash-common: overlay: Change config_screenBrightnessSettingMinimum to stock value 10
+    
+    For some reasons, A12 rom can't boot with the following error:
+    E AndroidRuntime: java.lang.IllegalStateException: Min or max values are invalid; raw min=0.035433073; raw max=1.0; backlight min=0.0; backlight max=1.0
+    
+    Change config_screenBrightnessSettingMinimum to stock value 10 to fix the above issue.
+
+commit 9b795cb9e2f5ccb9fac8d558a5665e59fce11721
+Author: Anh Tran <anh.tran.3889@gmail.com>
+Date:   Mon Apr 18 19:16:53 2022 +0700
+
+    flash-common: overlay: Adapt changes for A12
+
+commit c0043f48d0efa1a23b4dbffb6343182896aa2380
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 14:19:53 2021 +0200
+
+    flash-common: add few surfaceflinger vendor props
+
+commit b175de78cafc5e0c51a4d5d189dae5856670179c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 14:19:30 2021 +0200
+
+    flash-common: media: raise bitrates a bit
+
+commit a4aa5b31a7e599f78eb505471b05461ac42a1d6b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 12:10:34 2021 +0200
+
+    flash-common: add gnss_antenna_info.conf
+
+commit d6243498c21662841c769ba1fd66bcab5633531b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 04:56:14 2021 +0200
+
+    flash-common: add missing blob for fp
+
+commit c357355c65a299a032acb0a6fd2d5aaad88f3a34
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri May 7 22:55:23 2021 +0200
+
+    flash-common: add SunlightEnhancement interface
+    
+    putting it on ODM, so this vintf fragment is able to override the sm8150-common vintf fragment for that livedisplay
+
+commit 185211943ef7c83e9b2859d0c29e20d52acea4f2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu May 6 12:32:52 2021 +0200
+
+    flash-common: build common fingerprint hal
+
+commit beb3024b766525968aaeea37ce36a735f5547d84
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu May 6 10:44:36 2021 +0200
+
+    flash-common: update proprietary files to V500EM 20q
+
+commit 6b6cf18639f1ef5652addfc634934b14715f2bf3
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Mar 12 10:21:35 2021 +0100
+
+    Revert "flash-common: decommonize NFC"
+    
+    This reverts commit 085f7d2f493695c437fb087e0a30dfe7f04ad5b8.
+
+commit 11d620782da19e9236932da82a7f653009e71978
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 8 14:04:53 2021 +0100
+
+    flash-common: decommonize audio hal
+
+commit 29520aa6a04aa77c317aedd68e3011b72b7f76e2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 8 13:54:13 2021 +0100
+
+    flash-common: decommonize speaker protection prop
+
+commit ef76d56d4454a607ba264b06841a2d96a012fe11
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 8 13:39:06 2021 +0100
+
+    flash-common: decommonize NFC
+
+commit 31f8c9a1a726f796860d75705fe7d8594c810821
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Feb 23 19:53:55 2021 +0100
+
+    beta-common: move main audio_policy_configuration.xml to /vendor/etc/ and delete /vendor/etc/audio/*
+
+commit 4fd2a16b87f46f33671e186acc498d861b229b7e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Jan 27 15:12:43 2021 +0100
+
+    flash-common: Switch to standalone extract utils
+    
+    * Align with templates while we are at it
+
+commit dc47d1e7f17e2273e913229a606d724782317edb
+Author: Nolen Johnson <johnsonnolen@gmail.com>
+Date:   Fri Jul 10 12:10:21 2020 -0400
+
+    flash-common: bluetooth: Disable clean turn on
+    
+    * This isn't needed anymore.
+    
+    Change-Id: Ib77e5212099d82bbc07aea6044eb35109faff5cb
+
+commit b64c8b453790a15e5be46226f58a9093b5cbcadf
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 23 11:34:30 2021 +0100
+
+    Beta-common: Nuke QuadDacPanel
+
+commit fa8af01fa01fc5e2bd24905614a423b25833d5f4
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 23 11:34:13 2021 +0100
+
+    Beta-common: rework overlays
+
+commit dbb5ebc0f871bb274694a23aa0aa5657bb29de28
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Tue Jan 19 12:30:18 2021 +0100
+
+    Beta-common: fix headphone jack not working
+
+commit a127c2efc0ac1e3ccab455320dd8e45bc0d27795
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sun Jan 17 17:29:55 2021 +0100
+
+    Beta-common: fix audio policys
+
+commit 192d0658ac879ec306a82999bca1f8ea39b4499b
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Sat Jan 16 14:54:44 2021 +0100
+
+    Beta-common: support unofficial ota
+
+commit e754dbd474ed45f5ad167a93a0523dc5cc1dcfc8
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Fri Jan 15 15:22:23 2021 +0100
+
+    Beta-common: fix partition sizes
+
+commit a169a9d76236d58f18df8d3c4858da93fe32ab65
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 19:03:48 2021 +0100
+
+    Beta-common:update beta.mk
+
+commit bd4a8accd6a6dfa27b8cc8fbb5dc4e555cd3cc66
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:36:38 2020 +0100
+
+    Beta-common: fix up media profiles for aosp
+
+commit b290573a6b7f6391ee09ac99fc174ab96b94bcc2
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:32:42 2021 +0100
+
+    Beta-common:Proprietary-files.txt fix typo
+
+commit 498ee84c517c5e9d1cca2190cc9120d95a0d461e
+Merge: a2b60bc 030125a
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:10:40 2021 +0100
+
+    Merge branch 'lineage-18.1' of https://github.com/J0SH1X/android_device_lge_beta-common into lineage-18.1
+
+commit a2b60bcf68539a7637c83ccc218fec31cb40d5d5
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:07:19 2021 +0100
+
+    Beta-common:fix up proprietary files
+
+commit 030125a2289af031f8db7bfbed497370d5cbd43d
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 15:07:19 2021 +0100
+
+    Beta-common:fix up proprietary files
+
+commit 86b264b81902dd281ac32848cdf1183c70f5ce7b
+Merge: 7d78999 67e6925
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 14:31:52 2021 +0100
+
+    Merge branch 'lineage-18.1' of https://github.com/J0SH1X/android_device_lge_beta-common into lineage-18.1
+
+commit 7d78999e41af67247bc67ecdebb409f472625218
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 14:04:37 2021 +0100
+
+    Beta-common: Convert from Flash-common
+
+commit 67e69251d171012d2cb9ec47451f17914c7de702
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Thu Jan 14 14:04:37 2021 +0100
+
+    Beta-common: Convert from Flash-common
+
+commit 0d936045845fd1a91fd10b2800813611c749e898
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Oct 16 21:49:09 2020 +0200
+
+    flash-common: overlay: reduce min allowed screen brightness
+
+commit 6172c13518d385847e2468933d290bf5151c9c35
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Oct 15 20:28:13 2020 +0200
+
+    flash-common: remove prebuilt fingerprint hal
+    
+    * using source built one in sm8150-common
+
+commit 4b6cbf70968a9b6d010e99353a1ae7fb1b402d11
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Aug 24 19:14:13 2020 +0200
+
+    flash-common: add some camera props
+
+commit 05e6347a868d41b38a544d1c1aaec2040049d1f8
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Aug 24 17:56:31 2020 +0200
+
+    flash-common: audio policy offload: include a2dp_audio_policy like stock
+    
+    instead of a2dp_in_audio_policy
+
+commit d4c6047aa09cb8d60842703ae12a9b0f9e99d3fc
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Aug 22 22:31:33 2020 +0200
+
+    flash-common: bluetooth: raise MAX_L2CAP_CHANNELS to 32
+
+commit 2df9a18fd2efee139ae16eaff1e3ca4d0b3a1440
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Aug 22 22:31:06 2020 +0200
+
+    flash-common: bluetooth: raise AVDT_NUM_SEPS to 35
+
+commit 0d827b74f9e649fceeb76ec313073d113e4873de
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Aug 22 22:30:27 2020 +0200
+
+    flash-common: bluetooth: bring inline with LA.UM.8.1.r1-15600-sm8150.0
+
+commit a7b23c583a62952a6df379afe0d25f39597f4191
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Aug 22 22:28:38 2020 +0200
+
+    flash-common: switch to A2DP offload
+
+commit f33f30e356c7948c2a622825b7d36f15d6b95cba
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Aug 20 16:33:39 2020 +0200
+
+    flash-common: dont copy not existing rootdir
+
+commit 3556ad39b113a3eb62109d3afe1c5031a734fc05
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Aug 20 09:51:42 2020 +0200
+
+    flashlmdd -> flash-common
+    
+    create seperation for the implementation of flashlm, which is slightly different from flashlmdd
+
+commit c4ef342667a3ea0dacb91dbf12b66e6caf41734e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Aug 18 17:21:48 2020 +0200
+
+    flashlmdd: set voice assistant device model id
+
+commit 784c87be76d57ba41854ef5fe39a3446b6767a7e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Aug 18 15:21:13 2020 +0200
+
+    flashlmdd: decommonize persist.vendor.audio.voicecall.speaker.stereo
+    
+    also add persist.vendor.lge.audio.voice.clarity
+
+commit b07d0cd2ea497f34375f051e9154ef44bf2124ea
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Aug 18 15:08:38 2020 +0200
+
+    flashlmdd: remove property blacklist
+    
+    using property_override in init now
+
+commit 52aa79dbbb4e0eaf0061094b07db9476274a22ae
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Aug 7 12:29:42 2020 +0200
+
+    flashlmdd: update ro.vendor.lge.swversion to V50020k
+    
+    used by RIL blobs
+
+commit 2748387654e05f14abeb896ab0d9acb731b23ea6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Aug 7 10:48:07 2020 +0200
+
+    flashlmdd: update fingerprint to V500EM20k
+
+commit eb8a8b62fde3c2364d960e127f11502d38eb58d4
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Aug 7 10:47:47 2020 +0200
+
+    flashlmdd: update security patch to 2020-07-01
+
+commit 06de772af687ab6883354bd311cb5bc5636a028e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 30 20:41:34 2020 +0200
+
+    flashlmdd: rootdir: cleanup
+
+commit 5ba584b655e617ed12a614c0f17024a802c3832f
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Jul 28 20:48:28 2020 +0200
+
+    flashlmdd: add information about source of (un)pinned blobs
+
+commit 73f57ad44926c6c41a150d0f140a7d19565c92a1
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Jul 24 22:32:10 2020 +0200
+
+    flashlmdd: set proper TARGET_VENDOR_PRODUCT_NAME and property blacklist
+
+commit 53deb1ca8e599696d3e352c91c3cbeac61678999
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Jul 24 22:05:21 2020 +0200
+
+    flashlmdd: switch to metadata encryption
+    
+    * FDE didnt wanna work
+
+commit b514966e59f02e19cf14faa0d67ffe5ae9194a6c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 23 11:05:33 2020 +0200
+
+    flashlmdd: remove unneeded mounts and its restorecons in init
+
+commit f0119775356d0aca83a214a009fbcb8fcddd7535
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 23 11:04:10 2020 +0200
+
+    flashlmdd: switch to vendor.lge.hardware.audio.dac.control@1.0-service
+
+commit 04c5d6fae0e1ad9f297a0ce50583f6bfa1da2ca2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 23 11:02:41 2020 +0200
+
+    flashlmdd: remove device specific manifest, dac.control uses vintf now
+
+commit c3dc319e63195d410a5b1fdce8c43d5662b2f9af
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Jul 10 15:53:07 2020 +0200
+
+    flashlmdd: partially revert 2b51480
+    
+    * we arent certified anymore with the new one
+
+commit 2b51480f52e0bbfba08d4a780ae80da266447cb0
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Jul 7 16:49:12 2020 +0200
+
+    flashlmdd: update vendor security patch to 2020-05-01 for V500EM 20i
+
+commit 9f50a280c91a66005f5f85e30846f21b5ba2a53d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Tue Jul 7 16:47:23 2020 +0200
+
+    flashlmdd: properly set build fingerprint
+
+commit d9854bdc3c4f62b1276a9b472c51e986da20b000
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Jul 2 11:59:51 2020 +0200
+
+    flashlmdd: change manifest level to 3
+    
+    * 4 isnt supported by audio hal 4.0
+
+commit 8da5a7364b354fa838db8a87a3e28c76427e6269
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Apr 13 18:45:10 2020 +0200
+
+    flashlmdd: add lge.hardware.audio.dac.control service and manifest entry
+
+commit 245968201e8acedabcd4034533cb31a74e65a7f7
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Apr 12 21:16:06 2020 +0200
+
+    flashlmdd: Override PRODUCT_DEVICE instead of TARGET_DEVICE
+    
+    * TARGET_DEVICE isn't really used for generating props
+      anymore as tools/buildinfo_common.sh is using
+      PRODUCT_DEVICE instead.
+
+commit e60d3210f7013c337aa2518c1c1dba5958eab67b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Apr 12 11:08:39 2020 +0200
+
+    flashlmdd: switch to TARGET_<SYSTEM/VENDOR>_PROP override
+
+commit 3bc979c8540346400c4a4ba0374406df70ca1161
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Apr 11 14:43:42 2020 +0200
+
+    flashlmdd: update to V500EM20g
+
+commit 8f98951c14bca63316a147c2a02dc611c90c7347
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Mar 25 11:30:49 2020 +0100
+
+    flashlmdd: build DAC Panel from LGE sm8150-common tree
+
+commit 2a8d1fd22fee6fbdb6fc519e5574586c5cd223c2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Mar 25 11:26:35 2020 +0100
+
+    flashlmdd: enable intrusive LED
+
+commit abcd65ace6b797b24d7facce3b0b7d073e381a4c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Mar 14 14:53:32 2020 +0100
+
+    flashlmdd: add device specific RIL props for ECC list
+
+commit 07b525d398be979b976685e4818e8517b2fd94e9
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sat Mar 14 14:41:19 2020 +0100
+
+    flashlmdd: fix recovery mounts and notch height
+
+commit d5c739906675d0778504810a8342a13137478033
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Mar 5 13:55:40 2020 +0100
+
+    flashlmdd: add device specific audio configs, move common configs to sm8150-common
+
+commit 287093a2990e14f468de0f155c4a789b6805f64d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 2 19:04:50 2020 +0100
+
+    flashlmdd: add cpfirmware for widevine
+
+commit 932ecc1a2370565e44e9a58ac9d7ed499cd3b054
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 19:53:04 2020 +0100
+
+    flashlmdd: stock statusbar height, autobrightness values and updated notch
+
+commit f119febf0deffc6b8f7ab6068f8eb7aa1dd9e11d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 19:42:11 2020 +0100
+
+    flashlmdd: add stock power_profile
+
+commit 55a8e96fc5596dbc3dc377eea997abdcf15407b0
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 18:56:15 2020 +0100
+
+    flashlmdd: add and copy dual display idc and keylayout
+
+commit 4d85aafacfa139e050d9ff994ba9a93a81c34812
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 18:52:02 2020 +0100
+
+    flashlmdd: 2 more audio configs from stock
+
+commit 798ea8772fab06f9ffe6c4d7aee37e627bf43e31
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 18:50:11 2020 +0100
+
+    flashlmdd: more camera blobs
+
+commit bbbb60e95aa30704b29e34370d8c640130a21555
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 16:39:09 2020 +0100
+
+    flashlmdd: camera: add eeprom files
+
+commit 227ca57f03946b8a41e9247e5ea7a430165b9731
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Mar 1 16:20:39 2020 +0100
+
+    flashlmdd: add acdbdata
+
+commit b1dbab9863eea0714b127957d80d51606604f59a
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 23:47:02 2020 +0100
+
+    flashlmdd: rework audio configs
+    
+    * copy mixer paths
+    * dont use LGs weird structure
+
+commit 741c7806175a3edbd2adf89874f518501a8c935d
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 23:46:28 2020 +0100
+
+    flashlmdd: add missing bt firmware
+
+commit 1af68b0d77388977c5113cd55622ea48aa993196
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 23:45:59 2020 +0100
+
+    flashlmdd: add initial overlay
+
+commit 73f7465c2cf55faec7ba7337e8d671ea2800da26
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:36:55 2020 +0100
+
+    flashlmdd: dont forceencrypt, twrp cant deal with that
+
+commit 0cbfb950dd754406326eba86753943bdc87e5287
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:36:38 2020 +0100
+
+    flashlmdd: fix media profiles for aosp
+
+commit 384a48ac698c9d2386ff17c23c3d6d95882aa9b3
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:36:15 2020 +0100
+
+    flashlmdd: correct copy path
+
+commit 9ce688e965bf0243ea6f95024af39eb678c23ac6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:06:07 2020 +0100
+
+    flashlmdd: set target screen density
+
+commit eeede36ce37a21461a7d11763506c0e63dc868ff
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 19:05:40 2020 +0100
+
+    flashlmdd: add bluetooth include
+
+commit 5d19bead82e0a4e08b36d701395654c62391a901
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 15:55:30 2020 +0100
+
+    flashlmdd: media: correct paths for media configs
+
+commit 9ab1bf6ba80699ea7cfb92fa8dfc8a0a3fe5c9a6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 11:49:50 2020 +0100
+
+    flashlmdd: set screen size
+
+commit a4a381e2bb9337c52ef32b035494f1987fd2d09b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Feb 28 11:49:32 2020 +0100
+
+    flashlmdd: add missing 64bit camera.msmnile.so
+
+commit f5d0b74eeb23d211c4048c3194c921327e8a4ca6
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 21:13:43 2020 +0100
+
+    flashlmdd: add stock rootdir
+
+commit 90587996a586673a982a73a10e33069e4d63f13c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 20:59:57 2020 +0100
+
+    flashlmdd: add missing blobs
+
+commit 8e90c50593dbe59976c52665acaf7e1a4b56c53e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 17:42:06 2020 +0100
+
+    flashlmdd: we build libstdc++ on vendor, fix name of camera lib
+
+commit 79517e560f6067bb0b487403c30560a6fc06ee7a
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 17:41:38 2020 +0100
+
+    flashlmdd: sec_config is in sm8150-common
+
+commit 3c410a1877cc201c8f22f570e07d2a82c535a6f5
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 17:41:11 2020 +0100
+
+    flashlmdd: add missing audio configs (sound trigger)
+
+commit 3bc4c7e82d456dad2ef39c2b5ea4a29e2bc8ab2f
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 16:47:19 2020 +0100
+
+    flashlmdd: lighthal is commonized, NFC configs are in proprietary files
+
+commit 93e4a211ebfc83f83e9d78d2b6d0d6ba9ee14387
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:45:06 2020 +0100
+
+    flashlmdd: device specific sensor configs
+
+commit b51d6494f9c7d05efee9aa95f42af15a5619687c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:30:19 2020 +0100
+
+    flashlmdd: mode NFC proprietary file to common
+
+commit 66f1c69c299921a3f9ea40b48534125e8fe0d812
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:20:06 2020 +0100
+
+    flashlmdd: add device specific media configs
+
+commit f7b356d568b8a8474a3e189c353ce17057e3c825
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu Feb 27 15:12:19 2020 +0100
+
+    flashlmdd: add device specific audio configs
+
+commit 5fa5e09824f6c0597e80779ef4e812e34f7dd765
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Feb 23 16:22:28 2020 +0100
+
+    flashlmdd: add initial proprietary files
+
+commit 6b02059b070a4259899a89caacdd624c25915a92
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Feb 23 16:07:18 2020 +0100
+
+    flashlmdd: product and vendor partition sizes commonized
+
+commit f20347a57a8feb8da809fd4c16e206eb35df8fdb
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Feb 23 15:52:30 2020 +0100
+
+    flashlmdd: Initial bringup
 ########################################
 kernel/lge/beta Changes:
 ########################################
 vendor/lge Changes:
+commit f8aeea13a1bdbd885c5b0840cf07895565d77e13
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Wed Jun 29 11:23:37 2022 +0200
+
+    upload new blobs
 ########################################
