@@ -1,131 +1,158 @@
 
 ########################################
-device/oneplus/fajita Changes:
-commit 657d66043f8b64a753b6cab7d2c2f8aa3d80187e
-Author: shawnlin <shawnlin@google.com>
-Date:   Fri Sep 17 20:15:34 2021 +0800
+device/lge/betalm Changes:
+commit 5ad8471c7181a2d7c7b80ee3c29756c7d0848718
+Author: J0SH1X <aljoshua.hell@gmail.com>
+Date:   Tue Jun 28 10:33:10 2022 +0000
 
-    fajita: Remove resource overlays for system bar heights
+    Remove fstab its in common now
+
+commit d920203f0cdb247668825325d2c620910b352e71
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Oct 25 14:55:04 2021 +0200
+
+    flashlmdd: add missing dependency of sensors.sar.so
+
+commit 77e79457705000f76ce87a6a4108fa968e932e18
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 13:53:25 2021 +0200
+
+    flashlmdd: add more camera configs
+
+commit 1a832b85dff8e04ac4991fdbcd3464e51ae3416f
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 12:11:13 2021 +0200
+
+    flashlmdd: add sensors.sar.so to blobs
+
+commit eef219bb877fb015f30ad68115f6b3f87492d242
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Oct 22 23:15:12 2021 +0200
+
+    flashlmdd: device device name
     
-    With the new added APIs, we don't need to overlay status_bar_height that
-    contains cutout size and quick_qs_offset_height anymore.
+    define device name so we can use it in sm8150-common to copy fstab/init files properly
+
+commit 1541565376ba1921cc4094558ac34b6218bab789
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu May 6 12:18:28 2021 +0200
+
+    flashlmdd: extract-utils: patchelf doesnt work for our camera hals, use sed instead
+
+commit 561a2120d87906349fc5739e67684a5fe10e842e
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Jan 27 15:11:25 2021 +0100
+
+    flashlmdd: Switch to standalone extract utils
     
-    Bug: 186604541
-    Test: make
-    Change-Id: I36d869866ed03d3996b7b0d8cc6d3f6bb6ab624d
+    * Align with templates while we are at it
+
+commit 071a4926d616341a13e8d76a8215221b02e4505b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Wed Jan 6 12:18:45 2021 +0100
+
+    sm8150-common: switch to source provided patchelf binary
 ########################################
-device/oneplus/sdm845 Changes:
+device/lge/beta-common Changes:
+commit 4ca1cd7bc030ceed7e75fb0a8b956e89ec30c709
+Author: Anh Tran <anh.tran.3889@gmail.com>
+Date:   Mon Apr 18 19:22:10 2022 +0700
+
+    flash-common: sepolicy now is moved to sm8150-common
+
+commit 926b2dcb685ce6a224fd0337879732f5cf767a14
+Author: Anh Tran <anh.tran.3889@gmail.com>
+Date:   Mon Apr 18 19:19:12 2022 +0700
+
+    flash-common: overlay: Change config_screenBrightnessSettingMinimum to stock value 10
+    
+    For some reasons, A12 rom can't boot with the following error:
+    E AndroidRuntime: java.lang.IllegalStateException: Min or max values are invalid; raw min=0.035433073; raw max=1.0; backlight min=0.0; backlight max=1.0
+    
+    Change config_screenBrightnessSettingMinimum to stock value 10 to fix the above issue.
+
+commit 9b795cb9e2f5ccb9fac8d558a5665e59fce11721
+Author: Anh Tran <anh.tran.3889@gmail.com>
+Date:   Mon Apr 18 19:16:53 2022 +0700
+
+    flash-common: overlay: Adapt changes for A12
+
+commit c0043f48d0efa1a23b4dbffb6343182896aa2380
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 14:19:53 2021 +0200
+
+    flash-common: add few surfaceflinger vendor props
+
+commit b175de78cafc5e0c51a4d5d189dae5856670179c
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 14:19:30 2021 +0200
+
+    flash-common: media: raise bitrates a bit
+
+commit a4aa5b31a7e599f78eb505471b05461ac42a1d6b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 12:10:34 2021 +0200
+
+    flash-common: add gnss_antenna_info.conf
+
+commit d6243498c21662841c769ba1fd66bcab5633531b
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Sun Oct 24 04:56:14 2021 +0200
+
+    flash-common: add missing blob for fp
+
+commit c357355c65a299a032acb0a6fd2d5aaad88f3a34
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri May 7 22:55:23 2021 +0200
+
+    flash-common: add SunlightEnhancement interface
+    
+    putting it on ODM, so this vintf fragment is able to override the sm8150-common vintf fragment for that livedisplay
+
+commit 185211943ef7c83e9b2859d0c29e20d52acea4f2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu May 6 12:32:52 2021 +0200
+
+    flash-common: build common fingerprint hal
+
+commit beb3024b766525968aaeea37ce36a735f5547d84
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Thu May 6 10:44:36 2021 +0200
+
+    flash-common: update proprietary files to V500EM 20q
+
+commit 6b6cf18639f1ef5652addfc634934b14715f2bf3
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Fri Mar 12 10:21:35 2021 +0100
+
+    Revert "flash-common: decommonize NFC"
+    
+    This reverts commit 085f7d2f493695c437fb087e0a30dfe7f04ad5b8.
+
+commit 11d620782da19e9236932da82a7f653009e71978
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 8 14:04:53 2021 +0100
+
+    flash-common: decommonize audio hal
+
+commit 29520aa6a04aa77c317aedd68e3011b72b7f76e2
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 8 13:54:13 2021 +0100
+
+    flash-common: decommonize speaker protection prop
+
+commit ef76d56d4454a607ba264b06841a2d96a012fe11
+Author: SGCMarkus <markusornik@gmail.com>
+Date:   Mon Mar 8 13:39:06 2021 +0100
+
+    flash-common: decommonize NFC
 ########################################
-kernel/oneplus/sdm845 Changes:
-commit 8bce3f4b06035ec5ab93acd1ec08b03488fc38af
-Author: Edwin Moquete <edwinmmoquete@gmail.com>
-Date:   Sun Apr 10 23:06:50 2022 +0000
-
-    Merge tag 'LA.UM.10.3.r1-01700-sdm845.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api into HEAD
-    
-    "LA.UM.10.3.r1-01700-sdm845.0"
-    
-    Change-Id: Iaea9ef898c66442836a3cc2a1d2b1f77e85ccbd7
+kernel/lge/beta Changes:
 ########################################
-vendor/oneplus Changes:
-commit 914ca8e68ab633e4c241b1ea7271eb2ac75fd9a7
-Author: LuK1337 <priv.luk@gmail.com>
-Date:   Mon Apr 11 12:05:19 2022 +0200
+vendor/lge Changes:
+commit f8aeea13a1bdbd885c5b0840cf07895565d77e13
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Wed Jun 29 11:23:37 2022 +0200
 
-    guacamoleb: Extract from OnePlus7Oxygen_14.P.42_OTA_0420_all_2202112205_2c6f5649
-    
-    Change-Id: I50bdf9b4de2a1fc124840e2983065971ce86e41e
-
-commit b2ec4f50aa614ef3a1ee1d701ff99747f8c35880
-Author: Georg Veichtlbauer <georg@vware.at>
-Date:   Wed Apr 6 15:48:50 2022 +0200
-
-    msm8998-common: Shim lib-imsvideocodec
-    
-    Change-Id: I6249b3fba12693f48290947af383a8d6da8fefee
-
-commit fbb9537b5b197f5450b4b5db579745be9fbbe761
-Author: Vaisakh Murali <vaisakhmurali@gmail.com>
-Date:   Wed Jul 28 19:58:58 2021 +0200
-
-    hotdog: Add device specific arcsoft/chi libs
-    
-    These were previously in sm8150-common.
-    
-    Change-Id: I558e8ebc854f17ed5f0f1e43ba48d205e966d369
-
-commit d02861a373d73ca9aa2ec766a3d66698a7bb274c
-Author: Vaisakh Murali <vaisakhmurali@gmail.com>
-Date:   Wed Jul 28 19:58:58 2021 +0200
-
-    hotdog: Add device specific arcsoft/chi libs
-    
-    These were previously in sm8150-common.
-    
-    Change-Id: I558e8ebc854f17ed5f0f1e43ba48d205e966d369
-
-commit 7882c53349752d4a6fa09dec6a350eb42cfb30fe
-Author: Vaisakh Murali <vaisakhmurali@gmail.com>
-Date:   Wed Jul 28 19:58:58 2021 +0200
-
-    guacamole: Add device specific arcsoft/chi libs
-    
-    These were previously in sm8150-common.
-    
-    Change-Id: I558e8ebc854f17ed5f0f1e43ba48d205e966d369
-
-commit 0d08319485fd1bd8ea61baca11e392069d494f8c
-Author: Vaisakh Murali <vaisakhmurali@gmail.com>
-Date:   Wed Jul 28 19:58:58 2021 +0200
-
-    sm8150-common: Decommonize some camera blobs
-    
-    This way hotdogb can access to its ultrawide camera lens and the lens
-    switching experience is better overall.
-    
-    Change-Id: I77c9aaa5624fa33da10b58e7024e873173e7d1dd
-
-commit 0bd154f514631333fb3e595647dd77b6fbd9e8d3
-Author: LuK1337 <priv.luk@gmail.com>
-Date:   Wed Apr 6 18:58:31 2022 +0200
-
-    sdm845-common: Add PASR HIDL interface libs
-    
-    libqti-perfd.so depends on these.
-    
-    Change-Id: Ib8a68aa9407fe3817bda2680a693ac68f4464500
-
-commit 06cf853a95b39d093f29a3497f6886da88b7df61
-Author: Timi Rautamäki <timi.rautamaki@gmail.com>
-Date:   Mon Mar 28 16:33:05 2022 +0000
-
-    msm8998-common: drop prebuilt sensorservice
-    
-    Change-Id: Ia0fb8f0d258555e68f8db7a7cbe8ae982c0798d9
-
-commit 2d49006c793e221d7087ca60ea64c78ea39807f0
-Author: Timi Rautamäki <timi.rautamaki@gmail.com>
-Date:   Mon Mar 28 16:32:05 2022 +0000
-
-    msm8998-common: regenerate
-    
-    Change-Id: Ib2cb4b6dee03e22767591162b716b81b21425f42
-
-commit 9a7c3b17f5238059d3787aebb6f01f9d21066602
-Author: Timi Rautamäki <timi.rautamaki@gmail.com>
-Date:   Mon Mar 28 16:28:02 2022 +0000
-
-    Import msm8998-common family from lineage-18.1 (eb530b8)
-    
-    Change-Id: I31d35f6c6861ce4002ca0438c0ff10bf3c4a8e15
-
-commit 05e433ce97465ec22b8eda0c4e6b2fccfddb8f67
-Author: LuK1337 <priv.luk@gmail.com>
-Date:   Tue Mar 22 21:55:14 2022 +0100
-
-    enchilada: Pull patched fingerprint init rc from stock
-    
-    Commented out 'writepid' should speed up auth a bit.
-    
-    Change-Id: Ida62664e725fc3e594155cd2db3a157bb3188df2
+    upload new blobs
 ########################################
