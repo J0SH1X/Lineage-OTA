@@ -2,12 +2,12 @@
   "response": [
     {
       "datetime": "1656591667",
-      "filename": "lineage-18.1-20220704-UNOFFICIAL-betalm.zip",
+      "filename": "lineage-19.1-20220704-UNOFFICIAL-betalm.zip",
       "id": "91ff40be8b3a215bc746cee7cce8ded2",
       "romtype": "UNOFFICIAL",
       "size": "1025398560",
       "url":  "https://github.com/j0sh1x/Lineage-OTA/releases/download/betalm-20220704/lineage-19.1-20220704-UNOFFICIAL-betalm.zip",
-      "version": "18.1"
+      "version": "19.1"
     }
   ]
 }
