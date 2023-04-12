@@ -1,10 +1,21 @@
 
 ########################################
-device/lge/betalm Changes:
+device/samsung/r8q Changes:
+commit 90fe84340c1678d44310cf7c8962499bc60aac6c
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Wed Apr 12 22:29:42 2023 +0200
+
+    r8q: fix mic in recorder mode
+
+commit e2216cc7388e5701e264cfb8d5edccf4d7d12fb9
+Author: j0sh1x <aljoshua.hell@gmail.com>
+Date:   Wed Apr 12 22:26:51 2023 +0200
+
+    r8q: fix dualspeaker
 ########################################
-device/lge/beta-common Changes:
+device/samsung/sm8250-common Changes:
 ########################################
-kernel/lge/beta Changes:
+kernel/samsung/sm8250 Changes:
 ########################################
-vendor/lge Changes:
+vendor/samsung Changes:
 ########################################
